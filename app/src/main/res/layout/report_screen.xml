@@ -1,0 +1,880 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="313dp"
+    android:layout_height="match_parent"
+    android:layout_gravity="end"
+    android:background="@color/colorFc">
+
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_50"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_screen_reset"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/reset_report_screen"
+            android:gravity="center"
+            android:text="重置"
+            android:textColor="@color/color_4c4c4c"
+            android:textSize="@dimen/textsize_18" />
+
+        <TextView
+            android:id="@+id/tv_screen_sure"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/line_fc"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/colorFc"
+            android:textSize="@dimen/textsize_18" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/sv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/ll_bottom">
+
+        <LinearLayout
+            android:id="@+id/ll_report_screen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_25" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_10"
+                android:layout_marginTop="@dimen/dimen_13"
+                android:text="设备类型"
+                android:textColor="@color/color_262626"
+                android:textSize="@dimen/dimen_15" />
+
+            <nari.app.BianDianYingYong.jinyi.customview_jinyi.MyRadioGroup
+                android:id="@+id/rg_pjbg_sblx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_13"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_zbyq"
+                        style="@style/checked_btn"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_jinyi"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="主变压器"
+
+                        android:textColor="@color/pjbg_seceen_text_selector"
+                        android:textSize="@dimen/textsize_13" />
+
+                    <RadioButton
+                        android:id="@+id/rb_dlq"
+                        android:layout_width="0dp"
+                        style="@style/checked_btn"
+
+                        android:layout_marginLeft="@dimen/dimen_7"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_jinyi"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="断路器"
+                        android:textColor="@color/pjbg_seceen_text_selector"
+                        android:textSize="@dimen/textsize_13" />
+
+                    <RadioButton
+                        android:id="@+id/rb_glkg"
+                        android:layout_width="0dp"
+                        style="@style/checked_btn"
+                        android:layout_marginLeft="@dimen/dimen_7"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_jinyi"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="隔离开关"
+                        android:textColor="@color/pjbg_seceen_text_selector"
+                        android:textSize="@dimen/textsize_13" />
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:layout_marginTop="@dimen/dimen_7"
+                    android:orientation="horizontal">
+                    <RadioButton
+                        android:id="@+id/rb_syb"
+                        android:layout_width="0dp"
+                        style="@style/checked_btn"
+
+                        android:layout_weight="1"
+                        android:background="@drawable/button_jinyi"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="所用变"
+                        android:textColor="@color/pjbg_seceen_text_selector"
+                        android:textSize="@dimen/textsize_13" />
+                    <RadioButton
+                        android:id="@+id/rb_kgg"
+                        android:layout_width="0dp"
+                        style="@style/checked_btn"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="@dimen/dimen_7"
+                        android:background="@drawable/button_jinyi"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="开关柜"
+                        android:textColor="@color/pjbg_seceen_text_selector"
+                        android:textSize="@dimen/textsize_13" />
+
+                    <RadioButton
+                        android:id="@+id/rb_blz"
+                        android:layout_width="0dp"
+                        style="@style/checked_btn"
+                        android:layout_marginLeft="@dimen/dimen_7"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_jinyi"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="避雷针"
+                        android:textColor="@color/pjbg_seceen_text_selector"
+                        android:textSize="@dimen/textsize_13" />
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:layout_marginTop="@dimen/dimen_7"
+                    android:orientation="horizontal">
+                    <RadioButton
+                        android:id="@+id/rb_blq"
+                        android:layout_width="0dp"
+                        style="@style/checked_btn"
+
+                        android:layout_weight="1"
+                        android:background="@drawable/button_jinyi"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="避雷器"
+                        android:textColor="@color/pjbg_seceen_text_selector"
+                        android:textSize="@dimen/textsize_13" />
+
+                    <RadioButton
+                        android:id="@+id/rb_jdw"
+                        android:layout_width="0dp"
+                        style="@style/checked_btn"
+                        android:layout_marginLeft="@dimen/dimen_7"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_jinyi"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="接地网"
+                        android:textColor="@color/pjbg_seceen_text_selector"
+                        android:textSize="@dimen/textsize_13" />
+                    <RadioButton
+                        android:id="@+id/rb_mx"
+                        android:layout_width="0dp"
+                        style="@style/checked_btn"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="@dimen/dimen_7"
+                        android:background="@drawable/button_jinyi"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="母线"
+                        android:textColor="@color/pjbg_seceen_text_selector"
+                        android:textSize="@dimen/textsize_13" />
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:layout_marginTop="@dimen/dimen_7"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_dkq"
+                        android:layout_width="0dp"
+                        style="@style/checked_btn"
+
+                        android:layout_weight="1"
+                        android:background="@drawable/button_jinyi"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="电抗器"
+                        android:textColor="@color/pjbg_seceen_text_selector"
+                        android:textSize="@dimen/textsize_13" />
+
+                    <RadioButton
+                        android:id="@+id/rb_dlhgq"
+                        android:layout_width="0dp"
+                        style="@style/checked_btn"
+                        android:layout_marginLeft="@dimen/dimen_7"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_jinyi"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="电流互感器"
+                        android:textColor="@color/pjbg_seceen_text_selector"
+                        android:textSize="@dimen/textsize_13" />
+
+                    <RadioButton
+                        android:id="@+id/rb_zbq"
+                        android:layout_width="0dp"
+                        style="@style/checked_btn"
+                        android:layout_marginLeft="@dimen/dimen_7"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_jinyi"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="阻波器"
+                        android:textColor="@color/pjbg_seceen_text_selector"
+                        android:textSize="@dimen/textsize_12" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:layout_marginTop="@dimen/dimen_7"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_dyhgq"
+                        android:layout_width="0dp"
+                        style="@style/checked_btn"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_jinyi"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="电压互感器"
+                        android:textColor="@color/pjbg_seceen_text_selector"
+                        android:textSize="@dimen/textsize_13" />
+
+                    <RadioButton
+                        android:id="@+id/rb_dldrq"
+                        android:layout_width="0dp"
+                        style="@style/checked_btn"
+                        android:layout_marginLeft="@dimen/dimen_7"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_jinyi"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="电力电容器"
+                        android:textColor="@color/pjbg_seceen_text_selector"
+                        android:textSize="@dimen/textsize_13" />
+
+                    <RadioButton
+                        android:id="@+id/rb_zhdq"
+                        android:layout_width="0dp"
+                        style="@style/checked_btn"
+                        android:layout_marginLeft="@dimen/dimen_7"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_jinyi"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="组合电器"
+                        android:textColor="@color/pjbg_seceen_text_selector"
+                        android:textSize="@dimen/textsize_13" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:layout_marginTop="@dimen/dimen_7"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_jdq"
+                        style="@style/checked_btn"
+                        android:layout_width="0dp"
+
+                        android:layout_weight="1"
+                        android:background="@drawable/button_jinyi"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="继电器"
+                        android:textColor="@color/pjbg_seceen_text_selector"
+                        android:textSize="@dimen/textsize_13" />
+
+                    <RadioButton
+                        android:id="@+id/rb_zydxt"
+                        android:layout_width="0dp"
+                        style="@style/checked_btn"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="@dimen/dimen_7"
+                        android:background="@drawable/button_jinyi"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="站用电系统"
+                        android:textColor="@color/pjbg_seceen_text_selector"
+                        android:textSize="@dimen/textsize_13" />
+
+                    <RadioButton
+                        android:id="@+id/rb_pbdkq"
+                        android:layout_width="0dp"
+                        style="@style/checked_btn"
+                        android:layout_marginLeft="@dimen/dimen_7"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_jinyi"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="平波电抗器"
+                        android:textColor="@color/pjbg_seceen_text_selector"
+                        android:textSize="@dimen/textsize_13" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:layout_marginTop="@dimen/dimen_7"
+                    android:orientation="horizontal">
+                    <RadioButton
+                        android:id="@+id/rb_jllbq"
+                        android:layout_width="0dp"
+                        style="@style/checked_btn"
+
+                        android:layout_weight="1"
+                        android:background="@drawable/button_jinyi"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="交流滤波器"
+                        android:textColor="@color/pjbg_seceen_text_selector"
+                        android:textSize="@dimen/textsize_13" />
+
+                    <RadioButton
+                        android:id="@+id/rb_hlbyq"
+                        android:layout_width="0dp"
+                        style="@style/checked_btn"
+                        android:layout_marginLeft="@dimen/dimen_7"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_jinyi"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="换流变压器"
+                        android:textColor="@color/pjbg_seceen_text_selector"
+                        android:textSize="@dimen/textsize_13" />
+                    <RadioButton
+                        android:id="@+id/rb_zndl"
+                        android:layout_width="0dp"
+                        style="@style/checked_btn"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="@dimen/dimen_7"
+                        android:background="@drawable/button_jinyi"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="站内电缆"
+                        android:textColor="@color/pjbg_seceen_text_selector"
+                        android:textSize="@dimen/textsize_13" />
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:layout_marginTop="@dimen/dimen_7"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_hlz"
+                        android:layout_width="0dp"
+                        style="@style/checked_btn"
+
+                        android:layout_weight="1"
+                        android:background="@drawable/button_jinyi"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="换流站"
+                        android:textColor="@color/pjbg_seceen_text_selector"
+                        android:textSize="@dimen/textsize_13" />
+
+                    <RadioButton
+                        android:id="@+id/rb_jzghl"
+                        android:layout_width="0dp"
+                        style="@style/checked_btn"
+                        android:layout_marginLeft="@dimen/dimen_7"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_jinyi"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="晶闸管换流"
+                        android:textColor="@color/pjbg_seceen_text_selector"
+                        android:textSize="@dimen/textsize_13" />
+
+                    <RadioButton
+                        android:id="@+id/rb_hlzbh"
+                        android:layout_width="0dp"
+                        style="@style/checked_btn"
+                        android:layout_marginLeft="@dimen/dimen_7"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_jinyi"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="换流站保护"
+                        android:textColor="@color/pjbg_seceen_text_selector"
+                        android:textSize="@dimen/textsize_13" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:layout_marginTop="@dimen/dimen_7"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_wgbcq"
+                        style="@style/checked_btn"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_jinyi"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="无功补偿器"
+                        android:textColor="@color/pjbg_seceen_text_selector"
+                        android:textSize="@dimen/textsize_13" />
+
+                    <RadioButton
+                        android:id="@+id/rb_hlzkz"
+                        android:layout_width="0dp"
+                        style="@style/checked_btn"
+                        android:layout_marginLeft="@dimen/dimen_7"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_jinyi"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="换流站控制"
+                        android:textColor="@color/pjbg_seceen_text_selector"
+                        android:textSize="@dimen/textsize_13" />
+
+                    <RadioButton
+                        android:id="@+id/rb_clbc"
+                        android:layout_width="0dp"
+                        style="@style/checked_btn"
+                        android:layout_marginLeft="@dimen/dimen_7"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_jinyi"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="串联补偿"
+                        android:textColor="@color/pjbg_seceen_text_selector"
+                        android:textSize="@dimen/textsize_13" />
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:layout_marginTop="@dimen/dimen_7"
+                    android:orientation="horizontal">
+
+
+
+                    <RadioButton
+                        android:id="@+id/rb_wgfsqs"
+                        android:layout_width="0dp"
+                        style="@style/checked_btn"
+
+                        android:layout_weight="1"
+                        android:background="@drawable/button_jinyi"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="无功发生器"
+                        android:textColor="@color/pjbg_seceen_text_selector"
+                        android:textSize="@dimen/textsize_13" />
+                    <View
+
+                        android:layout_width="0dp"
+                        style="@style/checked_btn"
+                        android:layout_marginLeft="@dimen/dimen_7"
+                        android:layout_weight="1"
+                        />
+                    <View
+
+                        android:layout_width="0dp"
+                        style="@style/checked_btn"
+                        android:layout_marginLeft="@dimen/dimen_7"
+                        android:layout_weight="1"
+                        />
+                </LinearLayout>
+            </nari.app.BianDianYingYong.jinyi.customview_jinyi.MyRadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_10"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:text="电压等级"
+                android:textColor="@color/color_262626"
+                android:textSize="@dimen/dimen_15" />
+
+            <nari.app.BianDianYingYong.jinyi.customview_jinyi.MyRadioGroup
+                android:id="@+id/rg_pjbg_dydj"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_13"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_bg_110"
+                        android:layout_width="0dp"
+                        style="@style/checked_btn"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_jinyi"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="交流110kV"
+                        android:textColor="@color/pjbg_seceen_text_selector"
+                        android:textSize="@dimen/textsize_13" />
+
+                    <RadioButton
+                        android:id="@+id/rb_bg_220"
+                        android:layout_width="0dp"
+                        style="@style/checked_btn"
+                        android:layout_marginLeft="@dimen/dimen_7"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_jinyi"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="交流220kV"
+                        android:textColor="@color/pjbg_seceen_text_selector"
+                        android:textSize="@dimen/textsize_13" />
+
+                    <RadioButton
+                        android:id="@+id/rb_bg_1000"
+                        android:layout_width="0dp"
+                        style="@style/checked_btn"
+                        android:layout_marginLeft="@dimen/dimen_7"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_jinyi"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="交流1000kV"
+                        android:textColor="@color/pjbg_seceen_text_selector"
+                        android:textSize="@dimen/textsize_13" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:layout_marginTop="@dimen/dimen_13"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_bg_10"
+                        android:layout_width="0dp"
+                        style="@style/checked_btn"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_jinyi"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="交流10kV"
+                        android:textColor="@color/pjbg_seceen_text_selector"
+                        android:textSize="@dimen/textsize_13" />
+
+                    <RadioButton
+                        android:id="@+id/rb_bg_15_75"
+                        android:layout_width="0dp"
+                        style="@style/checked_btn"
+                        android:layout_marginLeft="@dimen/dimen_7"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_jinyi"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="交流15.75kV"
+                        android:textColor="@color/pjbg_seceen_text_selector"
+                        android:textSize="@dimen/textsize_13" />
+
+                    <RadioButton
+                        android:id="@+id/rb_bg_20"
+                        android:layout_width="0dp"
+                        style="@style/checked_btn"
+                        android:layout_marginLeft="@dimen/dimen_7"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_jinyi"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="交流20kV"
+                        android:textColor="@color/pjbg_seceen_text_selector"
+                        android:textSize="@dimen/textsize_13" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:layout_marginTop="@dimen/dimen_13"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_bg_35"
+                        android:layout_width="0dp"
+                        style="@style/checked_btn"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_jinyi"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="交流35kV"
+                        android:textColor="@color/pjbg_seceen_text_selector"
+                        android:textSize="@dimen/textsize_13" />
+
+                    <RadioButton
+                        android:id="@+id/rb_bg_66"
+                        android:layout_width="0dp"
+                        style="@style/checked_btn"
+                        android:layout_marginLeft="@dimen/dimen_7"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_jinyi"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="交流66kV"
+                        android:textColor="@color/pjbg_seceen_text_selector"
+                        android:textSize="@dimen/textsize_13" />
+
+                    <RadioButton
+                        android:id="@+id/rb_bg_72_5"
+                        android:layout_width="0dp"
+                        style="@style/checked_btn"
+                        android:layout_marginLeft="@dimen/dimen_7"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_jinyi"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="交流72.5kV"
+                        android:textColor="@color/pjbg_seceen_text_selector"
+                        android:textSize="@dimen/textsize_13" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:layout_marginTop="@dimen/dimen_13"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_bg_330"
+                        android:layout_width="0dp"
+                        style="@style/checked_btn"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_jinyi"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="交流330kV"
+                        android:textColor="@color/pjbg_seceen_text_selector"
+                        android:textSize="@dimen/textsize_13" />
+
+                    <RadioButton
+                        android:id="@+id/rb_bg_500"
+                        android:layout_width="0dp"
+                        style="@style/checked_btn"
+                        android:layout_marginLeft="@dimen/dimen_7"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_jinyi"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="交流500kV"
+                        android:textColor="@color/pjbg_seceen_text_selector"
+                        android:textSize="@dimen/textsize_13" />
+
+                    <RadioButton
+                        android:id="@+id/rb_bg_750"
+                        android:layout_width="0dp"
+                        style="@style/checked_btn"
+                        android:layout_marginLeft="@dimen/dimen_7"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_jinyi"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="交流750kV"
+                        android:textColor="@color/pjbg_seceen_text_selector"
+                        android:textSize="@dimen/textsize_13" />
+                </LinearLayout>
+            </nari.app.BianDianYingYong.jinyi.customview_jinyi.MyRadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_10"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:text="电站"
+                android:textColor="@color/color_262626"
+                android:textSize="@dimen/dimen_15" />
+
+            <EditText
+                android:id="@+id/et_pjbg_screen_dz"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_37"
+                android:layout_marginLeft="@dimen/dimen_10"
+                android:layout_marginRight="@dimen/dimen_10"
+                android:layout_marginTop="@dimen/dimen_13"
+                android:background="@drawable/button_jinyi"
+                android:gravity="center"
+                android:hint="请输入电站"
+                android:textColor="@color/color_b2b2b2"
+                android:textSize="@dimen/textsize_13" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_10"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:text="设备名称"
+                android:textColor="@color/color_262626"
+                android:textSize="@dimen/dimen_15" />
+
+            <EditText
+                android:id="@+id/et_pjbg_screen_sbmc"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_37"
+                android:layout_marginLeft="@dimen/dimen_10"
+                android:layout_marginRight="@dimen/dimen_10"
+                android:layout_marginTop="@dimen/dimen_13"
+                android:background="@drawable/button_jinyi"
+                android:gravity="center"
+                android:hint="请输入设备名称"
+                android:textColor="@color/color_b2b2b2"
+                android:textSize="@dimen/textsize_13" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_10"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:text="运行编号"
+                android:textColor="@color/color_262626"
+                android:textSize="@dimen/dimen_15" />
+
+
+            <EditText
+                android:id="@+id/et_pjbg_screen_yxbh"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_37"
+                android:layout_marginBottom="@dimen/dimen_7"
+                android:layout_marginLeft="@dimen/dimen_10"
+                android:layout_marginRight="@dimen/dimen_10"
+                android:layout_marginTop="@dimen/dimen_13"
+                android:background="@drawable/button_jinyi"
+                android:gravity="center"
+                android:hint="请输入运行编号"
+                android:textColor="@color/color_b2b2b2"
+                android:textSize="@dimen/textsize_13" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll_renwu_screen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_25" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:layout_marginTop="@dimen/dimen_13"
+            android:text="开始时间"
+            android:textColor="@color/color_262626"
+            android:textSize="@dimen/dimen_15" />
+
+        <TextView
+            android:id="@+id/tv_pjrw_screen_kssj"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_37"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:layout_marginRight="@dimen/dimen_10"
+            android:layout_marginTop="@dimen/dimen_13"
+            android:background="@drawable/button_jinyi"
+            android:gravity="center"
+            android:hint="请输入开始时间"
+            android:textColor="@color/color_4c4c4c"
+            android:textSize="@dimen/textsize_13" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:text="结束时间"
+            android:textColor="@color/color_262626"
+            android:textSize="@dimen/dimen_15" />
+
+
+        <TextView
+            android:id="@+id/tv_pjrw_screen_jssj"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_37"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:layout_marginRight="@dimen/dimen_10"
+            android:layout_marginTop="@dimen/dimen_13"
+            android:background="@drawable/button_jinyi"
+            android:gravity="center"
+            android:hint="请输入结束时间"
+            android:textColor="@color/color_4c4c4c"
+            android:textSize="@dimen/textsize_13" />
+    </LinearLayout>
+
+</RelativeLayout>

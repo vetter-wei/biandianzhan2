@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@mipmap/menuopen_up">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_8"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_upPopupWindow_video"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimen_24.5"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_10"
+                android:src="@mipmap/video_up" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_9"
+                android:text="视频"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/textsize_11" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_upPopupWindow_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimen_24.5"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_10"
+                android:src="@mipmap/photo_up" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_9"
+                android:text="拍照"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/textsize_11" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

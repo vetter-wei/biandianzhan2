@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:id="@+id/lo_whole"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_39">
+
+        <TextView
+            android:id="@+id/tv_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dimen_13"
+            android:text="设备名称"
+            android:textColor="@color/color_4d4d4d"
+            android:textSize="@dimen/textsize_17" />
+
+        <TextView
+            android:id="@+id/tv_pjrwDetails_sbmc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dimen_12"
+            android:layout_toRightOf="@+id/tv_1"
+            android:text="1号主变"
+            android:textColor="@color/color_4d4d4d"
+            android:textSize="@dimen/textsize_17" />
+
+        <TextView
+            android:id="@+id/tv_pjrwDetails_tj"
+            android:layout_width="@dimen/dimen_60"
+            android:layout_height="@dimen/dimen_22"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dimen_13"
+            android:background="@drawable/textview_border_red"
+            android:gravity="center"
+            android:text="提交"
+            android:textColor="@color/color_ff506c" />
+        <TextView
+            android:id="@+id/tv_pjrwDetails_bz"
+            android:layout_width="@dimen/dimen_60"
+            android:layout_height="@dimen/dimen_22"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dimen_13"
+            android:background="@drawable/textview_border_orange"
+            android:gravity="center"
+            android:text="编制"
+            android:textColor="@color/font_fdb96d"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginLeft="@dimen/dimen_13"
+        android:layout_marginRight="@dimen/dimen_13"
+        android:background="@drawable/dash_line"
+        android:layerType="software" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_67"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_dianzhangmingcheng"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="@dimen/dimen_13"
+                    android:layout_marginTop="@dimen/dimen_13"
+                    android:text="电站名称"
+                    android:textColor="@color/color_808080"
+                    android:textSize="@dimen/textsize_15" />
+
+                <TextView
+                    android:id="@+id/tv_pjrwDetails_dzmc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_9"
+                    android:layout_marginTop="@dimen/dimen_13"
+                    android:layout_toRightOf="@+id/tv_dianzhangmingcheng"
+                    android:text="XXX变电站"
+                    android:textColor="@color/color_4d4d4d"
+                    android:textSize="@dimen/textsize_15" />
+
+                <TextView
+                    android:id="@+id/tv_pingjiashijian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/tv_dianzhangmingcheng"
+                    android:layout_marginLeft="@dimen/dimen_13"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:text="评价时间"
+                    android:textColor="@color/color_808080"
+                    android:textSize="@dimen/textsize_15" />
+
+                <TextView
+                    android:id="@+id/tv_pjrwDetails_pjsj"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_dianzhangmingcheng"
+                    android:layout_marginLeft="@dimen/dimen_9"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:layout_toRightOf="@+id/tv_pingjiashijian"
+                    android:text="2016/11/09 19:54"
+                    android:textColor="@color/color_4d4d4d"
+                    android:textSize="@dimen/textsize_15" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <nari.app.BianDianYingYong.jinyi.customview_jinyi.CircleNumberProgressBar
+                android:id="@+id/pb_pjrwDetails_jdt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:progress="80"
+
+                app:cnpb_circle_radius="25dp"
+                app:cnpb_text_size="@dimen/textsize_11"
+
+                />
+
+            <TextView
+                android:id="@+id/tv_pjrwDetails_point"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="80分"
+                android:textColor="@color/font_333333"
+                android:textSize="@dimen/textsize_15" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_7"
+        android:background="@color/color_f2f2f2" />
+</LinearLayout>

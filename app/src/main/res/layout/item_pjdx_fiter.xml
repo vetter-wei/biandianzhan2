@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <View
+        android:background="#cccccc"
+        android:layout_width="match_parent"
+        android:layerType="software"
+        android:layout_height="1px"/>
+    <RelativeLayout
+        android:id="@+id/lo_whole_title"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="30dp">
+        <TextView
+            android:id="@+id/tv_title"
+            android:text="1212121"
+            android:textColor="#333333"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:layout_marginLeft="35dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+        <ImageView
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/ic_down"
+            android:layout_width="20dp"
+            android:layout_centerVertical="true"
+            android:layout_height="20dp" />
+    </RelativeLayout>
+    <View
+        android:background="#cccccc"
+        android:layout_width="match_parent"
+        android:layerType="software"
+        android:layout_height="1px"/>
+    <nari.app.BianDianYingYong.customview.CustomListView
+        android:id="@+id/lv_content"
+        android:visibility="gone"
+        android:paddingLeft="10dp"
+        android:divider="@null"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </nari.app.BianDianYingYong.customview.CustomListView>
+
+</LinearLayout>

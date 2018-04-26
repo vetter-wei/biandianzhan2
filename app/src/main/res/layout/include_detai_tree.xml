@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_1"
+        android:background="@color/color_cccccc" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_33"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/dimen_14"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:src="@mipmap/pack_up" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:text="本体"
+            android:textColor="@color/font_black_deep"
+            android:textSize="@dimen/textsize_15" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_1"
+            android:background="@color/color_cccccc" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_34.5"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:text="外观"
+            android:textColor="@color/font_black_deep"
+            android:textSize="@dimen/textsize_13" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_34.5"
+            android:layout_marginTop="@dimen/dimen_13"
+            android:text="铁心及夹件绝缘-绝缘电阻"
+            android:textColor="@color/font_black_deep"
+            android:textSize="@dimen/textsize_13" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_34.5"
+            android:layout_marginTop="@dimen/dimen_13"
+            android:text="铁心及夹件绝缘-接地电流"
+            android:textColor="@color/font_black_deep"
+            android:textSize="@dimen/textsize_13" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_34.5"
+            android:layout_marginTop="@dimen/dimen_13"
+            android:text="温度计"
+            android:textColor="@color/font_black_deep"
+            android:textSize="@dimen/textsize_13" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_34.5"
+            android:layout_marginTop="@dimen/dimen_13"
+            android:text="储油柜"
+            android:textColor="@color/font_black_deep"
+            android:textSize="@dimen/textsize_13" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_34.5"
+            android:layout_marginTop="@dimen/dimen_13"
+            android:text="吸湿器"
+            android:textColor="@color/font_black_deep"
+            android:textSize="@dimen/textsize_13" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_34.5"
+            android:layout_marginTop="@dimen/dimen_13"
+            android:text="阀门"
+            android:textColor="@color/font_black_deep"
+            android:textSize="@dimen/textsize_13" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_34.5"
+            android:layout_marginTop="@dimen/dimen_13"
+            android:text="噪声"
+            android:textColor="@color/font_black_deep"
+            android:textSize="@dimen/textsize_13" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_34.5"
+            android:layout_marginTop="@dimen/dimen_13"
+            android:text="锈蚀"
+            android:textColor="@color/font_black_deep"
+            android:textSize="@dimen/textsize_13" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_34.5"
+            android:layout_marginTop="@dimen/dimen_13"
+            android:text="渗漏"
+            android:textColor="@color/font_black_deep"
+            android:textSize="@dimen/textsize_13" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_34.5"
+            android:layout_marginTop="@dimen/dimen_13"
+            android:text="本体端子箱"
+            android:textColor="@color/font_black_deep"
+            android:textSize="@dimen/textsize_13" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_34.5"
+            android:layout_marginTop="@dimen/dimen_13"
+            android:text="例行试验-实验周期"
+            android:textColor="@color/font_black_deep"
+            android:textSize="@dimen/textsize_13" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_34.5"
+            android:layout_marginTop="@dimen/dimen_13"
+            android:text="例行试验-直流电阻"
+            android:textColor="@color/font_black_deep"
+            android:textSize="@dimen/textsize_13" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_34.5"
+            android:layout_marginTop="@dimen/dimen_13"
+            android:text="例行试验-绝缘电阻"
+            android:textColor="@color/font_black_deep"
+            android:textSize="@dimen/textsize_13" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_34.5"
+            android:layout_marginTop="@dimen/dimen_13"
+            android:text="例行实验-绕组连同套管的介质损耗因数（20℃）"
+            android:textColor="@color/font_black_deep"
+            android:textSize="@dimen/textsize_13" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_34.5"
+            android:layout_marginTop="@dimen/dimen_13"
+            android:text="例行实验-油中溶解气体分析"
+            android:textColor="@color/font_black_deep"
+            android:textSize="@dimen/textsize_13" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_23"
+            android:layout_marginLeft="@dimen/dimen_34.5"
+            android:layout_marginTop="@dimen/dimen_13"
+            android:text="例行实验-绝缘油例行试验"
+            android:textColor="@color/font_black_deep"
+            android:textSize="@dimen/textsize_13" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_1"
+        android:background="@color/color_cccccc" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_33"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/dimen_14"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:src="@mipmap/pack_up" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:text="套管"
+            android:textColor="@color/font_black_deep"
+            android:textSize="@dimen/textsize_15" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_1"
+            android:background="@color/color_cccccc" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_34.5"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:text="外观"
+            android:textColor="@color/font_black_deep"
+            android:textSize="@dimen/textsize_13" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_34.5"
+            android:layout_marginTop="@dimen/dimen_13"
+            android:text="套管和龙门架引线及线夹"
+            android:textColor="@color/font_black_deep"
+            android:textSize="@dimen/textsize_13" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_34.5"
+            android:layout_marginTop="@dimen/dimen_13"
+            android:text="温度"
+            android:textColor="@color/font_black_deep"
+            android:textSize="@dimen/textsize_13" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_34.5"
+            android:layout_marginTop="@dimen/dimen_13"
+            android:text="外绝缘"
+            android:textColor="@color/font_black_deep"
+            android:textSize="@dimen/textsize_13" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_34.5"
+            android:layout_marginTop="@dimen/dimen_13"
+            android:text="例行试验-试验周期"
+            android:textColor="@color/font_black_deep"
+            android:textSize="@dimen/textsize_13" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_34.5"
+            android:layout_marginTop="@dimen/dimen_13"
+            android:text="例行试验-电容量和介质损耗"
+            android:textColor="@color/font_black_deep"
+            android:textSize="@dimen/textsize_13" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_34.5"
+            android:layout_marginTop="@dimen/dimen_13"
+            android:text="例行试验-因数"
+            android:textColor="@color/font_black_deep"
+            android:textSize="@dimen/textsize_13" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_34.5"
+            android:layout_marginTop="@dimen/dimen_13"
+            android:text="例行试验-绝缘电阻"
+            android:textColor="@color/font_black_deep"
+            android:textSize="@dimen/textsize_13" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_34.5"
+            android:layout_marginTop="@dimen/dimen_13"
+            android:text="例行试验-充气套管SF6气体温度测试"
+            android:textColor="@color/font_black_deep"
+            android:textSize="@dimen/textsize_13" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_23"
+            android:layout_marginLeft="@dimen/dimen_34.5"
+            android:layout_marginTop="@dimen/dimen_13"
+            android:text="反措执行"
+            android:textColor="@color/font_black_deep"
+            android:textSize="@dimen/textsize_13" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_1"
+        android:background="@color/color_cccccc" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_33"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/dimen_14"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:src="@mipmap/pack_up" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:text="分接开关"
+            android:textColor="@color/font_black_deep"
+            android:textSize="@dimen/textsize_15" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_1"
+            android:background="@color/color_cccccc" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_34.5"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:text="外观"
+            android:textColor="@color/font_black_deep"
+            android:textSize="@dimen/textsize_13" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_34.5"
+            android:layout_marginTop="@dimen/dimen_13"
+            android:text="吸湿器"
+            android:textColor="@color/font_black_deep"
+            android:textSize="@dimen/textsize_13" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_34.5"
+            android:layout_marginTop="@dimen/dimen_13"
+            android:text="机械特性-切换开关"
+            android:textColor="@color/font_black_deep"
+            android:textSize="@dimen/textsize_13" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_34.5"
+            android:layout_marginTop="@dimen/dimen_13"
+            android:text="机械特性-限位装置"
+            android:textColor="@color/font_black_deep"
+            android:textSize="@dimen/textsize_13" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_34.5"
+            android:layout_marginTop="@dimen/dimen_13"
+            android:text="机械特性-分接位置"
+            android:textColor="@color/font_black_deep"
+            android:textSize="@dimen/textsize_13" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_34.5"
+            android:layout_marginTop="@dimen/dimen_13"
+            android:text="切换小室绝缘油-在线滤油装置"
+            android:textColor="@color/font_black_deep"
+            android:textSize="@dimen/textsize_13" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_34.5"
+            android:layout_marginTop="@dimen/dimen_13"
+            android:text="切换小室绝缘油-油性能"
+            android:textColor="@color/font_black_deep"
+            android:textSize="@dimen/textsize_13" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_23"
+            android:layout_marginLeft="@dimen/dimen_34.5"
+            android:layout_marginTop="@dimen/dimen_13"
+            android:text="反措执行"
+            android:textColor="@color/font_black_deep"
+            android:textSize="@dimen/textsize_13" />
+    </LinearLayout>
+</LinearLayout>

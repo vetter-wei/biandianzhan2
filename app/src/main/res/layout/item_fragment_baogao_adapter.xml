@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/lo_whole"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorFc">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/re_ygd"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_40">
+
+            <TextView
+                android:id="@+id/tv_device"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="13dp"
+                android:text="设备名称"
+                android:textColor="@color/color_4d4d4d"
+                android:textSize="@dimen/textsize_17" />
+
+            <TextView
+                android:id="@+id/tv_pjbg_sbmc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@id/tv_device"
+                android:singleLine="true"
+                android:text="1号主变"
+                android:textColor="@color/color_4d4d4d"
+                android:textSize="@dimen/textsize_17" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginLeft="@dimen/dimen_13"
+            android:layout_marginRight="@dimen/dimen_13"
+            android:background="@drawable/dash_line"
+            android:layerType="software" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_10">
+
+            <TextView
+                android:id="@+id/tv_rwmc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="13dp"
+                android:text="评价任务名称"
+                android:textColor="@color/color_808080"
+                android:textSize="@dimen/textsize_15" />
+
+            <TextView
+                android:id="@+id/tv_pjbg_rwmc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@id/tv_rwmc"
+                android:singleLine="true"
+                android:text="主变压器"
+                android:textColor="@color/color_4d4d4d"
+                android:textSize="@dimen/textsize_15" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_10">
+
+                    <TextView
+                        android:id="@+id/tv_leixin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="13dp"
+                        android:text="设备类型"
+                        android:textColor="@color/color_808080"
+                        android:textSize="@dimen/textsize_15" />
+
+                    <TextView
+                        android:id="@+id/tv_pjbg_sblx"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="12dp"
+                        android:layout_toRightOf="@id/tv_leixin"
+                        android:singleLine="true"
+                        android:text="主变压器"
+                        android:textColor="@color/color_4d4d4d"
+                        android:textSize="@dimen/textsize_15" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_10">
+
+                    <TextView
+                        android:id="@+id/tv_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="13dp"
+                        android:text="电站名称"
+                        android:textColor="@color/color_808080"
+                        android:textSize="@dimen/textsize_15" />
+
+                    <TextView
+                        android:id="@+id/tv_pjbg_dzmc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="12dp"
+                        android:layout_toRightOf="@id/tv_name"
+                        android:singleLine="true"
+                        android:text="XXXKVXXX变电站"
+                        android:textColor="@color/color_4d4d4d"
+                        android:textSize="@dimen/textsize_15" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_10">
+
+                    <TextView
+                        android:id="@+id/tv_dzmc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="13dp"
+                        android:text="电压等级"
+                        android:textColor="@color/color_808080"
+                        android:textSize="@dimen/textsize_15" />
+
+                    <TextView
+                        android:id="@+id/tv_pjbg_dydj"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="12dp"
+                        android:layout_toRightOf="@id/tv_dzmc"
+                        android:singleLine="true"
+                        android:text="交流110kV"
+                        android:textColor="@color/color_4d4d4d"
+                        android:textSize="@dimen/textsize_15" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_10">
+
+                    <TextView
+                        android:id="@+id/tv_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="13dp"
+                        android:text="运行编号"
+                        android:textColor="@color/color_808080"
+                        android:textSize="@dimen/textsize_15" />
+
+                    <TextView
+                        android:id="@+id/tv_pjbg_yxbh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="12dp"
+                        android:layout_toRightOf="@id/tv_num"
+                        android:singleLine="true"
+                        android:text="123544444adz"
+                        android:textColor="@color/color_4d4d4d"
+                        android:textSize="@dimen/textsize_15" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_10">
+
+                    <TextView
+                        android:id="@+id/tv_shijian"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="13dp"
+                        android:text="评价时间"
+                        android:textColor="@color/color_808080"
+                        android:textSize="@dimen/textsize_15" />
+
+                    <TextView
+                        android:id="@+id/tv_pjbg_pjsj"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="12dp"
+                        android:layout_toRightOf="@id/tv_shijian"
+                        android:singleLine="true"
+                        android:text="2016/11/06 19:49"
+                        android:textColor="@color/color_4d4d4d"
+                        android:textSize="@dimen/textsize_15" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <nari.app.BianDianYingYong.jinyi.customview_jinyi.CircleNumberProgressBar
+
+                    android:id="@+id/pb_pjbg_jdt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:progress="80"
+                    app:cnpb_circle_radius="@dimen/dimen_38" />
+
+                <TextView
+                    android:id="@+id/tv_pjbg_point"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="80分"
+                    android:textColor="@color/font_333333"
+                    android:textSize="@dimen/textsize_16" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_7"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:background="@color/color_f2f2f2" />
+    </LinearLayout>
+</LinearLayout>

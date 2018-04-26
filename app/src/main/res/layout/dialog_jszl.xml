@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="400dp"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="400dp"
+        android:layout_height="match_parent"
+        android:background="@color/transparent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="@dimen/dimen_300"
+            android:layout_height="@dimen/dimen_38"
+            android:background="@drawable/dia_quan_top">
+
+            <TextView
+                android:id="@+id/tv_jszl_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="正令确认"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_16" />
+
+            <ImageView
+                android:id="@+id/image_jszl_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dimen_10"
+                android:src="@mipmap/close" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/dimen_300"
+            android:layout_height="198dp"
+            android:background="@drawable/dia_jszl"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_15"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="发令人："
+                    android:textColor="@color/test_gray_66"
+                    android:textSize="@dimen/textsize_13" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_7"
+                    android:layout_weight="2"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/et_jszl_flr"
+                        android:layout_width="@dimen/dimen_140"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:singleLine="true"
+                        android:textSize="@dimen/textsize_13" />
+
+                    <View
+                        android:layout_width="@dimen/dimen_140"
+                        android:layout_height="1dp"
+                        android:background="@color/half_black1" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_9"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="发令时间："
+                    android:textColor="@color/test_gray_66"
+                    android:textSize="@dimen/textsize_13" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_7"
+                    android:layout_weight="2"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_jszl_flsj"
+                        android:layout_width="@dimen/dimen_140"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:singleLine="true"
+                        android:textSize="@dimen/textsize_13" />
+
+                    <View
+                        android:layout_width="@dimen/dimen_140"
+                        android:layout_height="1dp"
+                        android:background="@color/half_black1" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_9"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="接令人："
+                    android:textColor="@color/test_gray_66"
+                    android:textSize="@dimen/textsize_13" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_7"
+                    android:layout_weight="2"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/et_jszl_jlr"
+                        android:layout_width="@dimen/dimen_140"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:singleLine="true"
+                        android:textSize="@dimen/textsize_13" />
+
+                    <View
+                        android:layout_width="@dimen/dimen_140"
+                        android:layout_height="1dp"
+                        android:background="@color/half_black1" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_9"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="变电站："
+                    android:textColor="@color/test_gray_66"
+                    android:textSize="@dimen/textsize_13" />
+
+                <TextView
+                    android:id="@+id/tv_jszl_bdz"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_7"
+                    android:layout_weight="2"
+                    android:text="港西变电站"
+                    android:textColor="@color/colorFill"
+                    android:textSize="@dimen/textsize_13" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_9"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="操作内容："
+                    android:textColor="@color/test_gray_66"
+                    android:textSize="@dimen/textsize_13" />
+
+                <TextView
+                    android:id="@+id/tv_jszl_cznr"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_7"
+                    android:layout_weight="1.5"
+                    android:singleLine="true"
+                    android:text="停用110k备用电源自投装置"
+                    android:textColor="@color/colorFill"
+                    android:textSize="@dimen/textsize_13" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_15"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button_jszl_cancel"
+                    android:layout_width="@dimen/dimen_75"
+                    android:layout_height="@dimen/dimen_25"
+                    android:background="@drawable/dia_quan_button"
+                    android:text="取消"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize_14"/>
+
+                <Button
+                    android:id="@+id/button_jszl_queren"
+                    android:layout_width="@dimen/dimen_75"
+                    android:layout_height="@dimen/dimen_25"
+                    android:layout_marginLeft="@dimen/dimen_30"
+                    android:background="@drawable/dia_quan_button"
+                    android:text="确认"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize_14"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

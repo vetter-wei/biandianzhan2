@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f2f2f2"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/view_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_25"
+        android:background="@color/line_fc" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_43"
+        android:background="@color/line_fc">
+
+        <View
+            android:id="@+id/view1_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_1" />
+
+        <ImageView
+            android:id="@+id/image_processed_czbz_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dimen_8"
+            android:padding="@dimen/dimen_7"
+            android:src="@mipmap/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="操作项目"
+            android:textColor="@color/colorTitle"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <nari.app.BianDianYingYong.customview.CustomListView
+            android:id="@+id/lv_processed_czbz_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@null"
+            android:layout_marginTop="@dimen/dimen_10">
+
+        </nari.app.BianDianYingYong.customview.CustomListView>
+    </ScrollView>
+</LinearLayout>

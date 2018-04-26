@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="nari.app.BianDianYingYong.activity.MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/view_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_25"
+            android:background="@color/line_fc" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_43"
+            android:background="@color/line_fc">
+
+            <View
+                android:id="@+id/view1_title"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_1" />
+
+            <ImageView
+                android:id="@+id/image_processed_czbz_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dimen_8"
+                android:padding="@dimen/dimen_7"
+                android:src="@mipmap/back" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="评价报告"
+                android:textColor="@color/colorTitle"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/popupwindow_cache"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dimen_13"
+                android:src="@mipmap/popupwindow_lxhc" />
+        </RelativeLayout>
+        <ListView
+            android:id="@+id/lv_fragment_baogao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:cacheColorHint="@color/transparent"
+            android:divider="@null"
+            android:scrollbars="none" />
+
+    </LinearLayout>
+
+</LinearLayout>

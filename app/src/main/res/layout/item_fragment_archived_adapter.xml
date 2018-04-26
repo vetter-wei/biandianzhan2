@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/colorFc">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_13"
+        android:layout_marginRight="@dimen/dimen_13"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/re_ygd"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_40"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_piaohao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="票号："
+                android:textColor="@color/color_4d4d4d"
+                android:textSize="@dimen/textsize_18" />
+
+            <TextView
+                android:id="@+id/tv_archived_fragment_bh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/tv_piaohao"
+                android:singleLine="true"
+                android:text="123544444"
+                android:textColor="@color/color_4d4d4d"
+                android:textSize="@dimen/textsize_18" />
+
+            <TextView
+                android:id="@+id/iv_ygd_status"
+                android:layout_width="@dimen/dimen_60"
+                android:layout_height="@dimen/dimen_22"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/textview_border_dark"
+                android:gravity="center"
+                android:text="已归档"
+                android:textColor="@color/colorFc"
+                android:textSize="@dimen/textsize_16"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@drawable/dash_line"
+            android:layerType="software" />
+
+        <TextView
+            android:id="@+id/tv_archived_fragment_cznr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:text="220kv普九策划i手法哦i好地方"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textColor="@color/color_595959"
+            android:textSize="@dimen/textsize_17" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_13"
+            android:layout_marginTop="@dimen/dimen_13">
+
+            <TextView
+                android:id="@+id/tv_caozuoren"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="制票部门:"
+                android:textColor="@color/color_7a7a7a"
+                android:textSize="@dimen/textsize_15" />
+
+            <TextView
+                android:id="@+id/tv_archived_fragment_czr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_caozuoren"
+                android:text="张耀文"
+                android:textColor="@color/color_7a7a7a"
+                android:textSize="@dimen/textsize_15" />
+
+            <TextView
+                android:id="@+id/tv_archived_fragment_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="2016/11/04 09:49"
+                android:textColor="@color/color_7a7a7a"
+                android:textSize="@dimen/textsize_15" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

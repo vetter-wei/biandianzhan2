@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/line_fc"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dimen_72"
+            android:src="@mipmap/login_logo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/logo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dimen_17"
+            android:text="变电五通应用"
+            android:textColor="@color/colorFc"
+            android:textSize="@dimen/textsize_24" />
+
+        <TextView
+            android:id="@+id/tv_enter_jingyihua"
+            android:layout_width="@dimen/dimen_243"
+            android:layout_height="@dimen/dimen_42"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/dimen_101"
+            android:background="@drawable/login_jingyihua"
+            android:gravity="center"
+            android:text="精益化评价"
+            android:textColor="@color/colorFc"
+            android:textSize="@dimen/textsize_20" />
+
+        <TextView
+            android:id="@+id/tv_enter_caozuopiao"
+            android:layout_width="@dimen/dimen_243"
+            android:layout_height="@dimen/dimen_42"
+            android:layout_above="@id/tv_enter_jingyihua"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/dimen_14"
+            android:background="@drawable/login_caozuopiao"
+            android:gravity="center"
+            android:text="操作票"
+            android:textColor="@color/line_fc"
+            android:textSize="@dimen/textsize_20" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/tv_enter_caozuopiao"
+            android:layout_marginBottom="@dimen/dimen_27">
+
+            <View
+                android:layout_width="@dimen/dimen_134"
+                android:layout_height="@dimen/dimen_1"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dimen_13"
+                android:background="@color/colorFc" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="选择入口"
+                android:textColor="@color/colorFc"
+                android:textSize="@dimen/textsize_14" />
+
+            <View
+                android:layout_width="@dimen/dimen_134"
+                android:layout_height="@dimen/dimen_1"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dimen_13"
+                android:background="@color/colorFc" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_enter_cache"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/dimen_60"
+            android:padding="@dimen/dimen_10"
+            android:text="@string/off_line"
+            android:textColor="@color/colorFc"
+            android:textSize="@dimen/textsize_13" />
+
+        <TextView
+            android:id="@+id/tv_jyh_enter_cache"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/dimen_30"
+            android:padding="@dimen/dimen_10"
+            android:text="精益化评价离线入口>>"
+            android:textColor="@color/colorFc"
+            android:textSize="@dimen/textsize_13" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="版本号V 1.0.0"
+            android:textColor="@color/colorFc"
+            android:textSize="@dimen/textsize_12" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_25" />
+
+</LinearLayout>

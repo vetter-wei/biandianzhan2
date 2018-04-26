@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:icon="@mipmap/end"
+        android:title="人员" />
+    <item
+        android:icon="@mipmap/start"
+        android:title="啊是的减肥撒地方" />
+    <item
+        android:icon="@mipmap/pause"
+        android:title="啊是的减肥撒地方" />
+    <item
+        android:icon="@mipmap/task"
+        android:title="啊是的减肥撒地方" />
+</menu>

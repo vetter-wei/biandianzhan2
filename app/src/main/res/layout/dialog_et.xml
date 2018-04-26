@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="@dimen/dimen_267"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_40"
+        android:layout_marginRight="@dimen/dimen_40"
+        android:background="@drawable/dia_quan"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dia_quan_top">
+
+            <TextView
+                android:id="@+id/tv_re_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:padding="@dimen/dimen_8"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_21"/>
+        </RelativeLayout>
+
+        <nari.app.BianDianYingYong.customview.ScrollEditText
+            android:id="@+id/set_content"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_120"
+            android:background="@drawable/dia_quan"
+            android:gravity="top"
+            android:hint="请您编辑内容"
+            android:maxHeight="300dp"
+            android:maxLines="5"
+            android:minHeight="100dp"
+            android:padding="@dimen/dimen_16"
+            android:textColorHint="@color/test_gray_66"
+            android:textSize="@dimen/textsize_18"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/dimen_20">
+
+            <Button
+                android:id="@+id/bt_re_close"
+                android:layout_width="@dimen/dimen_80"
+                android:layout_height="@dimen/dimen_30"
+                android:background="@drawable/dia_quan_button"
+                android:text="取消"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_18"/>
+
+            <Button
+                android:id="@+id/bt_re_sure"
+                android:layout_width="@dimen/dimen_80"
+                android:layout_height="@dimen/dimen_30"
+                android:layout_marginLeft="@dimen/dimen_40"
+                android:background="@drawable/dia_quan_button"
+                android:text="确认"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_18"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

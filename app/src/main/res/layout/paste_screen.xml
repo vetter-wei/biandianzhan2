@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="313dp"
+    android:layout_height="match_parent"
+    android:layout_gravity="end"
+    android:background="@color/colorFc">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_25" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:layout_marginTop="@dimen/dimen_13"
+            android:text="电压等级"
+            android:textColor="@color/color_262626"
+            android:textSize="@dimen/dimen_15" />
+
+        <nari.app.BianDianYingYong.jinyi.customview_jinyi.MyRadioGroup
+            android:id="@+id/rg_paste_dydj"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_13"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_10"
+                android:layout_marginRight="@dimen/dimen_10"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_110"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dimen_27"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_jinyi"
+                    android:button="@null"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:text="交流110kV"
+                    android:textColor="@color/pjbg_seceen_text_selector"
+                    android:textSize="@dimen/textsize_13" />
+
+                <RadioButton
+                    android:id="@+id/rb_220"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dimen_27"
+                    android:layout_marginLeft="@dimen/dimen_7"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_jinyi"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="交流220kV"
+                    android:textColor="@color/pjbg_seceen_text_selector"
+                    android:textSize="@dimen/textsize_13" />
+
+                <RadioButton
+                    android:id="@+id/rb_1000"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dimen_27"
+                    android:layout_marginLeft="@dimen/dimen_7"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_jinyi"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="交流1000kV"
+                    android:textColor="@color/pjbg_seceen_text_selector"
+                    android:textSize="@dimen/textsize_13" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_10"
+                android:layout_marginRight="@dimen/dimen_10"
+                android:layout_marginTop="@dimen/dimen_13"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_10"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dimen_27"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_jinyi"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="交流10kV"
+                    android:textColor="@color/pjbg_seceen_text_selector"
+                    android:textSize="@dimen/textsize_13" />
+
+                <RadioButton
+                    android:id="@+id/rb_15_75"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dimen_27"
+                    android:layout_marginLeft="@dimen/dimen_7"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_jinyi"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="交流15.75kV"
+                    android:textColor="@color/pjbg_seceen_text_selector"
+                    android:textSize="@dimen/textsize_13" />
+
+                <RadioButton
+                    android:id="@+id/rb_20"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dimen_27"
+                    android:layout_marginLeft="@dimen/dimen_7"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_jinyi"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="交流20kV"
+                    android:textColor="@color/pjbg_seceen_text_selector"
+                    android:textSize="@dimen/textsize_13" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_10"
+                android:layout_marginRight="@dimen/dimen_10"
+                android:layout_marginTop="@dimen/dimen_13"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_35"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dimen_27"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_jinyi"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="交流35kV"
+                    android:textColor="@color/pjbg_seceen_text_selector"
+                    android:textSize="@dimen/textsize_13" />
+
+                <RadioButton
+                    android:id="@+id/rb_66"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dimen_27"
+                    android:layout_marginLeft="@dimen/dimen_7"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_jinyi"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="交流66kV"
+                    android:textColor="@color/pjbg_seceen_text_selector"
+                    android:textSize="@dimen/textsize_13" />
+
+                <RadioButton
+                    android:id="@+id/rb_72_5"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dimen_27"
+                    android:layout_marginLeft="@dimen/dimen_7"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_jinyi"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="交流72.5kV"
+                    android:textColor="@color/pjbg_seceen_text_selector"
+                    android:textSize="@dimen/textsize_13" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_10"
+                android:layout_marginRight="@dimen/dimen_10"
+                android:layout_marginTop="@dimen/dimen_13"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_330"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dimen_27"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_jinyi"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="交流330kV"
+                    android:textColor="@color/pjbg_seceen_text_selector"
+                    android:textSize="@dimen/textsize_13" />
+
+                <RadioButton
+                    android:id="@+id/rb_500"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dimen_27"
+                    android:layout_marginLeft="@dimen/dimen_7"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_jinyi"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="交流500kV"
+                    android:textColor="@color/pjbg_seceen_text_selector"
+                    android:textSize="@dimen/textsize_13" />
+
+                <RadioButton
+                    android:id="@+id/rb_750"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dimen_27"
+                    android:layout_marginLeft="@dimen/dimen_7"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_jinyi"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="交流750kV"
+                    android:textColor="@color/pjbg_seceen_text_selector"
+                    android:textSize="@dimen/textsize_13" />
+            </LinearLayout>
+        </nari.app.BianDianYingYong.jinyi.customview_jinyi.MyRadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:text="粘贴状态"
+            android:textColor="@color/color_262626"
+            android:textSize="@dimen/dimen_15" />
+
+        <RadioGroup
+            android:id="@+id/rg_paste_ztzt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:layout_marginRight="@dimen/dimen_10"
+            android:layout_marginTop="@dimen/dimen_13"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <RadioButton
+                android:id="@+id/rb_unpaste"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dimen_27"
+                android:layout_weight="1"
+                android:background="@drawable/button_jinyi"
+                android:button="@null"
+                android:gravity="center"
+                android:text="未粘贴"
+                android:textColor="@color/pjbg_seceen_text_selector"
+                android:textSize="@dimen/textsize_13" />
+
+            <RadioButton
+                android:id="@+id/rb_pasted"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dimen_27"
+                android:layout_marginLeft="@dimen/dimen_7"
+                android:layout_weight="1"
+                android:background="@drawable/button_jinyi"
+                android:button="@null"
+                android:gravity="center"
+                android:text="已粘贴"
+                android:textColor="@color/pjbg_seceen_text_selector"
+                android:textSize="@dimen/textsize_13" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:text="设备名称"
+            android:textColor="@color/color_262626"
+            android:textSize="@dimen/dimen_15" />
+
+        <EditText
+            android:id="@+id/et_paste_screen_sbmc"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_27"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:layout_marginRight="@dimen/dimen_10"
+            android:layout_marginTop="@dimen/dimen_13"
+            android:background="@drawable/button_jinyi"
+            android:gravity="center"
+            android:hint="请输入设备名称"
+            android:textColor="@color/color_4c4c4c"
+            android:textSize="@dimen/textsize_13" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_40"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_paste_screen_reset"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/reset_report_screen"
+            android:gravity="center"
+            android:text="重置"
+            android:textColor="@color/color_4c4c4c"
+            android:textSize="@dimen/textsize_16" />
+
+        <TextView
+            android:id="@+id/tv_paste_screen_sure"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/line_fc"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/colorFc"
+            android:textSize="@dimen/textsize_16" />
+    </LinearLayout>
+</RelativeLayout>

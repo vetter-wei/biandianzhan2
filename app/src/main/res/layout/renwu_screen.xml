@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="313dp"
+    android:layout_height="match_parent"
+    android:layout_gravity="end"
+    android:background="@color/colorFc">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_25" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:layout_marginTop="@dimen/dimen_13"
+            android:text="开始时间"
+            android:textColor="@color/color_262626"
+            android:textSize="@dimen/dimen_15" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_27"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:layout_marginRight="@dimen/dimen_10"
+            android:layout_marginTop="@dimen/dimen_13"
+            android:background="@drawable/button_jinyi"
+            android:gravity="center"
+            android:hint="请输入开始时间"
+            android:textColor="@color/color_b2b2b2"
+            android:textSize="@dimen/textsize_13" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:text="结束时间"
+            android:textColor="@color/color_262626"
+            android:textSize="@dimen/dimen_15" />
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_27"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:layout_marginRight="@dimen/dimen_10"
+            android:layout_marginTop="@dimen/dimen_13"
+            android:background="@drawable/button_jinyi"
+            android:gravity="center"
+            android:hint="请输入结束时间"
+            android:textColor="@color/color_b2b2b2"
+            android:textSize="@dimen/textsize_13" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_40"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/reset_report_screen"
+            android:gravity="center"
+            android:text="重置"
+            android:textColor="@color/color_4c4c4c"
+            android:textSize="@dimen/textsize_16" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/line_fc"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/colorFc"
+            android:textSize="@dimen/textsize_16" />
+    </LinearLayout>
+</RelativeLayout>

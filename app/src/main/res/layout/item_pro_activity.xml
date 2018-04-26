@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="115dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_28"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:weightSum="6">
+
+        <TextView
+            android:id="@+id/tv_pro_order"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:text="5"
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/textsize_8"/>
+
+        <TextView
+            android:id="@+id/tv_pro_czxm"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_20"
+            android:layout_weight="3"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="操作项目 "
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/textsize_10"/>
+
+        <TextView
+            android:id="@+id/tv_pro_zxsj"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:gravity="center"
+            android:text="10:34"
+            android:textColor="@color/colorFill"
+            android:textSize="@dimen/textsize_9"/>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/iv_pro_cz"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/caozuo_moren"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.7">
+
+            <ImageView
+                android:id="@+id/image_processed_activity_downPopup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/dimen_11"
+                android:src="@mipmap/menu_down"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

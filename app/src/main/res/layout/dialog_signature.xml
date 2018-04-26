@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_30"
+        android:layout_marginRight="@dimen/dimen_30"
+        android:background="@drawable/dia_quan"
+        android:orientation="vertical" >
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dia_quan_top" >
+
+            <ImageView
+                android:id="@+id/iv_qm_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dimen_10"
+                android:layout_marginRight="@dimen/dimen_10"
+                android:src="@mipmap/close" />
+
+            <TextView
+                android:id="@+id/tv_qm_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:padding="@dimen/dimen_8"
+                android:text="审票人签名"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_19" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_35"
+            android:layout_marginRight="@dimen/dimen_35"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dimen_25"
+                android:gravity="center"
+                android:text="用户部门 ："
+                android:textColor="@color/test_gray_66"
+                android:textSize="@dimen/textsize_15" />
+
+            <Spinner
+                android:id="@+id/spinner_club"
+                android:layout_width="@dimen/dimen_120"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_35"
+            android:layout_marginRight="@dimen/dimen_35"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dimen_25"
+                android:gravity="center"
+                android:text="用户名称 ："
+                android:textColor="@color/test_gray_66"
+                android:textSize="@dimen/textsize_15" />
+            <!-- android:entries="@array/languages" -->
+
+            <Spinner
+                android:id="@+id/spinner_name"
+                android:layout_width="@dimen/dimen_120"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_40"
+            android:layout_marginLeft="@dimen/dimen_35"
+            android:layout_marginRight="@dimen/dimen_35"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dimen_25"
+                android:gravity="center"
+                android:text="用户密码 ："
+                android:textColor="@color/test_gray_66"
+                android:textSize="@dimen/textsize_15" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+
+                <EditText
+                    android:id="@+id/et_pw"
+                    android:layout_width="@dimen/dimen_120"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:inputType="textPassword" />
+
+                <View
+                    android:id="@+id/v_main_activity_first"
+                    android:layout_width="@dimen/dimen_120"
+                    android:layout_height="1dp"
+                    android:background="@color/half_black1" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_60"
+            android:layout_marginTop="@dimen/dimen_20" >
+
+            <Button
+                android:id="@+id/bt_qm_sure"
+                android:layout_width="@dimen/dimen_90"
+                android:layout_height="@dimen/dimen_40"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/dia_quan_button"
+                android:text="确认"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_18" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

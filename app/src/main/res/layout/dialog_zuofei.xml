@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dimen_11">
+
+        <LinearLayout
+            android:layout_width="@dimen/dimen_267"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_40"
+                android:background="@drawable/dia_quan_top"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tv_zuofei_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="作废原因"
+                    android:textColor="@color/colorFc"
+                    android:textSize="@dimen/textsize_20" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/dia_jszl"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/et_zuofei_reason"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:layout_margin="@dimen/dimen_13"
+                    android:background="@drawable/edittext_zuofei"
+                    android:hint="请输入作废原因..."
+                    android:lines="5"
+                    android:textColor="@color/test_gray_66"
+                    android:textSize="@dimen/textsize_17" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/button_zuofei_reset"
+                        android:layout_width="@dimen/dimen_75"
+                        android:layout_height="@dimen/dimen_25"
+                        android:background="@drawable/dia_quan_button"
+                        android:text="重置"
+                        android:textColor="@color/colorFc"
+                        android:textSize="@dimen/textsize_16" />
+
+                    <Button
+                        android:id="@+id/button_zuofei_queren"
+                        android:layout_width="@dimen/dimen_75"
+                        android:layout_height="@dimen/dimen_25"
+                        android:layout_marginLeft="@dimen/dimen_30"
+                        android:background="@drawable/dia_quan_button"
+                        android:text="确认"
+                        android:textColor="@color/colorFc"
+                        android:textSize="@dimen/textsize_16" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+    <ImageView
+        android:id="@+id/image_zuofei_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/frameLayout"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/frameLayout"
+        android:src="@mipmap/zuofei_cancel"/>
+</RelativeLayout>

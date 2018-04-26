@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_5"
+        android:layout_marginRight="@dimen/dimen_10"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <TextView
+
+                android:id="@+id/tv_topLine"
+                android:layout_width="@dimen/dimen_2.5"
+                android:layout_height="@dimen/dimen_15"
+                android:layout_centerHorizontal="true"
+                android:background="@color/colorFill" />
+
+            <ImageView
+                android:id="@+id/dian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_topLine"
+                android:src="@mipmap/dian" />
+
+            <TextView
+                android:layout_width="@dimen/dimen_2.5"
+                android:layout_height="match_parent"
+                android:layout_below="@id/dian"
+                android:layout_centerHorizontal="true"
+                android:background="@color/colorFill" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_10"
+            android:background="@drawable/dianjiu"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_26"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tv_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:text="操作单位："
+                    android:textColor="@color/colorFill"
+                    android:textSize="@dimen/textsize_11" />
+
+                <TextView
+                    android:id="@+id/tv_ddl_operation_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/tv_1"
+                    android:text="本台"
+                    android:textColor="@color/colorFill"
+                    android:textSize="@dimen/textsize_11" />
+
+                <TextView
+                    android:id="@+id/tv_ddl_order_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:text="2017/09/10 08:45"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/textsize_10" />
+
+                <TextView
+                    android:id="@+id/tv_ddl_order_person"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:layout_toLeftOf="@id/tv_ddl_order_time"
+                    android:text="周建"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/textsize_10" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/tv_ddl_order_person"
+                    android:text="下令人："
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/textsize_10" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_0.5"
+                android:layout_marginLeft="@dimen/dimen_10"
+                android:layout_marginRight="@dimen/dimen_10"
+                android:background="@color/colorShuiPing" />
+
+            <nari.app.BianDianYingYong.customview.CustomListView
+                android:id="@+id/lv_ddl_order_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@drawable/list_item_divider"
+                android:dividerHeight="@dimen/dimen_0.5">
+
+            </nari.app.BianDianYingYong.customview.CustomListView>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

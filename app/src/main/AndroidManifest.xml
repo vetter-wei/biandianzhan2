@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="nari.app.BianDianYingYong">
+
+    <uses-permission android:name="nari.mip.permission" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <!-- 以下是使用wifi访问网络所需要的权限 -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name="nari.app.BianDianYingYong.base.BaseApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/caozuopiao"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="nari.app.BianDianYingYong.activity.LoginActivity">
+            <!--TODO 放开-->
+           <!-- <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
+        </activity>
+        <activity
+            android:name="nari.app.BianDianYingYong.activity.EnterActivity"
+            android:theme="@style/AppTheme" >
+                 <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="nari.app.BianDianYingYong.activity.MainActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="nari.app.BianDianYingYong.activity.ExecutionActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="nari.app.BianDianYingYong.activity.ArchivedActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="nari.app.BianDianYingYong.activity.ProcessedActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="nari.app.BianDianYingYong.activity.OperationStepsActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="nari.app.BianDianYingYong.activity.OrderActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="nari.app.BianDianYingYong.activity.JszlActivity"
+            android:theme="@style/dialogJszlStyle" />
+        <activity
+            android:name="nari.app.BianDianYingYong.jinyi.activity_jinyi.MainActivity_jinyi"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="nari.app.BianDianYingYong.jinyi.activity_jinyi.PJRenWuActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="nari.app.BianDianYingYong.jinyi.activity_jinyi.PJBGXQActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="nari.app.BianDianYingYong.jinyi.activity_jinyi.PJBGEditActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="nari.app.BianDianYingYong.jinyi.activity_jinyi.PasteActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="nari.app.BianDianYingYong.jinyi.activity_jinyi.JinyihuaOffActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="nari.app.BianDianYingYong.jinyi.activity_jinyi.PJBGCacheEditActivity"
+            android:theme="@style/AppTheme" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="nari.app.biandianyingyong.FileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"></meta-data>
+        </provider>
+    </application>
+</manifest>
