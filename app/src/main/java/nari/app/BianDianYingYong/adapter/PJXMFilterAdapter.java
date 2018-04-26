@@ -54,7 +54,7 @@ public class PJXMFilterAdapter extends ArrayAdapter<PJXMBean> {
         vh = new PJXMFilterAdapter.ViewHold(convertView);
         convertView.setTag(vh);
         final PJXMBean bean = getItem(position);
-        vh.tv_title.setText(bean.getPJXMMC());
+        vh.tv_title.setText(" - "+bean.getPJXMMC());
 
 
 

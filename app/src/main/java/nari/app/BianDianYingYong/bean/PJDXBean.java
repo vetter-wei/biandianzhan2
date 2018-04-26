@@ -4,6 +4,7 @@ import net.tsz.afinal.annotation.sqlite.Id;
 import net.tsz.afinal.annotation.sqlite.Table;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -12,7 +13,19 @@ import java.util.List;
  */
 @Table(name="PJDX")
 public class PJDXBean  {
+    //// TODO: 2018-04-26
     @Id
+    private String OBJ_ID = "1";//主键
+    private String RESULT = "";//操作是否成功 1：成功，0：失败
+    private String DESCRIPTION = "";//异常信息
+    private String PJXZ_ID = "";//评价细则_主键
+    private String PJDXBM ="";//评价大项编码
+    private String PJDXMC = "分接开关";//评价大项名称
+    private String FZ = "20";//分值
+    private boolean isChecked = false;//是否选中
+    List<PJXMBean> pjxmBeanList = new ArrayList<>();
+
+    /*@Id
     private String OBJ_ID = "";//主键
     private String RESULT = "";//操作是否成功 1：成功，0：失败
     private String DESCRIPTION = "";//异常信息
@@ -21,7 +34,14 @@ public class PJDXBean  {
     private String PJDXMC = "";//评价大项名称
     private String FZ = "";//分值
     private boolean isChecked = false;//是否选中
-    List<PJXMBean> pjxmBeanList;
+    List<PJXMBean> pjxmBeanList;*/
+    //// TODO: 2018-04-26
+    public PJDXBean() {
+        super();
+        pjxmBeanList.add(new PJXMBean());
+        pjxmBeanList.add(new PJXMBean());
+        pjxmBeanList.add(new PJXMBean());
+    }
 
     public boolean isChecked() {
         return isChecked;

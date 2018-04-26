@@ -2,11 +2,19 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/lo_whole"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:paddingRight="@dimen/dimen_10"
+    android:paddingLeft="@dimen/dimen_10"
     android:background="@color/colorFc">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_10"
 
+        android:background="@color/color_f2f2f2" />
     <LinearLayout
+        android:background="@drawable/cornor_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -17,33 +25,60 @@
             android:layout_height="@dimen/dimen_40">
 
             <TextView
-                android:id="@+id/tv_device"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="13dp"
-                android:text="设备名称"
-                android:textColor="@color/color_4d4d4d"
-                android:textSize="@dimen/textsize_17" />
-
-            <TextView
                 android:id="@+id/tv_pjbg_sbmc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="12dp"
-                android:layout_toRightOf="@id/tv_device"
                 android:singleLine="true"
                 android:text="1号主变"
-                android:textColor="@color/color_4d4d4d"
+                android:textColor="#00a2ff"
                 android:textSize="@dimen/textsize_17" />
+            <TextView
+                android:id="@+id/tv_weipingjia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
 
+                android:visibility="gone"
+                android:text="未评价"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="13dp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/textsize_17" />
+            <TextView
+                android:id="@+id/tv_pjbg_point"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_centerVertical="true"
+
+
+                android:text="80"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="23dp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/textsize_18" />
+            <TextView
+                android:id="@+id/tv_fen"
+                android:layout_alignParentRight="true"
+                android:translationY="3dp"
+
+                android:layout_marginRight="13dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+
+                android:text="分"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/textsize_10" />
         </RelativeLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="2dp"
             android:layout_marginLeft="@dimen/dimen_13"
+
             android:layout_marginRight="@dimen/dimen_13"
             android:background="@drawable/dash_line"
             android:layerType="software" />
@@ -59,8 +94,8 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="13dp"
-                android:text="评价任务名称"
-                android:textColor="@color/color_808080"
+                android:text="评价任务"
+                android:textColor="@color/color_999999"
                 android:textSize="@dimen/textsize_15" />
 
             <TextView
@@ -72,7 +107,7 @@
                 android:layout_toRightOf="@id/tv_rwmc"
                 android:singleLine="true"
                 android:text="主变压器"
-                android:textColor="@color/color_4d4d4d"
+                android:textColor="#666666"
                 android:textSize="@dimen/textsize_15" />
 
         </RelativeLayout>
@@ -80,6 +115,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
             android:orientation="horizontal">
 
             <LinearLayout
@@ -100,7 +136,7 @@
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="13dp"
                         android:text="设备类型"
-                        android:textColor="@color/color_808080"
+                        android:textColor="@color/color_999999"
                         android:textSize="@dimen/textsize_15" />
 
                     <TextView
@@ -112,7 +148,7 @@
                         android:layout_toRightOf="@id/tv_leixin"
                         android:singleLine="true"
                         android:text="主变压器"
-                        android:textColor="@color/color_4d4d4d"
+                        android:textColor="#666666"
                         android:textSize="@dimen/textsize_15" />
 
                 </RelativeLayout>
@@ -126,11 +162,13 @@
                         android:id="@+id/tv_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
                         android:layout_marginLeft="13dp"
                         android:text="电站名称"
-                        android:textColor="@color/color_808080"
-                        android:textSize="@dimen/textsize_15" />
+                        android:textColor="@color/color_999999"
+                        android:textSize="@dimen/textsize_15"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="13dp" />
 
                     <TextView
                         android:id="@+id/tv_pjbg_dzmc"
@@ -141,7 +179,7 @@
                         android:layout_toRightOf="@id/tv_name"
                         android:singleLine="true"
                         android:text="XXXKVXXX变电站"
-                        android:textColor="@color/color_4d4d4d"
+                        android:textColor="#666666"
                         android:textSize="@dimen/textsize_15" />
 
                 </RelativeLayout>
@@ -158,7 +196,7 @@
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="13dp"
                         android:text="电压等级"
-                        android:textColor="@color/color_808080"
+                        android:textColor="@color/color_999999"
                         android:textSize="@dimen/textsize_15" />
 
                     <TextView
@@ -170,7 +208,7 @@
                         android:layout_toRightOf="@id/tv_dzmc"
                         android:singleLine="true"
                         android:text="交流110kV"
-                        android:textColor="@color/color_4d4d4d"
+                        android:textColor="#666666"
                         android:textSize="@dimen/textsize_15" />
 
                 </RelativeLayout>
@@ -185,11 +223,13 @@
                         android:id="@+id/tv_num"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
                         android:layout_marginLeft="13dp"
                         android:text="运行编号"
-                        android:textColor="@color/color_808080"
-                        android:textSize="@dimen/textsize_15" />
+                        android:textColor="@color/color_999999"
+                        android:textSize="@dimen/textsize_15"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="13dp" />
 
                     <TextView
                         android:id="@+id/tv_pjbg_yxbh"
@@ -200,7 +240,7 @@
                         android:layout_toRightOf="@id/tv_num"
                         android:singleLine="true"
                         android:text="123544444adz"
-                        android:textColor="@color/color_4d4d4d"
+                        android:textColor="#666666"
                         android:textSize="@dimen/textsize_15" />
 
                 </RelativeLayout>
@@ -208,6 +248,7 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+
                     android:layout_marginTop="@dimen/dimen_10">
 
                     <TextView
@@ -217,25 +258,28 @@
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="13dp"
                         android:text="评价时间"
-                        android:textColor="@color/color_808080"
+                        android:textColor="@color/color_999999"
                         android:textSize="@dimen/textsize_15" />
 
                     <TextView
                         android:id="@+id/tv_pjbg_pjsj"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
                         android:layout_marginLeft="12dp"
-                        android:layout_toRightOf="@id/tv_shijian"
                         android:singleLine="true"
+
                         android:text="2016/11/06 19:49"
-                        android:textColor="@color/color_4d4d4d"
-                        android:textSize="@dimen/textsize_15" />
+                        android:textColor="#666666"
+                        android:textSize="@dimen/textsize_15"
+                        android:layout_alignParentTop="true"
+                        android:layout_toEndOf="@+id/tv_shijian"
+                        android:layout_marginStart="10dp" />
 
                 </RelativeLayout>
             </LinearLayout>
 
             <RelativeLayout
+                android:visibility="gone"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1">
@@ -245,26 +289,16 @@
                     android:id="@+id/pb_pjbg_jdt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
                     android:layout_gravity="center"
                     android:progress="80"
-                    app:cnpb_circle_radius="@dimen/dimen_38" />
+                    app:cnpb_circle_radius="@dimen/dimen_38"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true" />
 
-                <TextView
-                    android:id="@+id/tv_pjbg_point"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:text="80分"
-                    android:textColor="@color/font_333333"
-                    android:textSize="@dimen/textsize_16" />
+
             </RelativeLayout>
         </LinearLayout>
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/dimen_7"
-            android:layout_marginTop="@dimen/dimen_10"
-            android:background="@color/color_f2f2f2" />
+
     </LinearLayout>
 </LinearLayout>

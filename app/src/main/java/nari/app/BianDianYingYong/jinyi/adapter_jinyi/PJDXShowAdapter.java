@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
@@ -36,6 +37,8 @@ public class PJDXShowAdapter extends ArrayAdapter<PJDXBean> {
 
         @InjectView(R.id.tv_title)
         TextView tv_title;
+        @InjectView(R.id.iv_show)
+        ImageView iv_show;
         @InjectView(R.id.lo_whole_title)
         View lo_whole_title;
 
@@ -57,7 +60,7 @@ public class PJDXShowAdapter extends ArrayAdapter<PJDXBean> {
         vh = new PJDXShowAdapter.ViewHold(convertView);
         convertView.setTag(vh);
         final PJDXBean bean = getItem(position);
-        vh.tv_title.setText(StringUtil.toChinese(String.valueOf(position+1))+"、"+bean.getPJDXMC());
+        vh.tv_title.setText(bean.getPJDXMC());
 
         if(bean.getPjxmBeanList() == null || bean.getPjxmBeanList().size() == 0){
             vh.lv_content.setVisibility(View.GONE);
@@ -65,11 +68,16 @@ public class PJDXShowAdapter extends ArrayAdapter<PJDXBean> {
 
             if(bean.isChecked()){
                 PJXMShowAdapter adapter = new PJXMShowAdapter(mContext,bean.getPjxmBeanList());
+
                 vh.lv_content.setVisibility(View.VISIBLE);
+                vh.tv_title.setTextColor(mContext.getResources().getColor(R.color.colorPrimary));
                 vh.lv_content.setAdapter(adapter);
+                vh.iv_show.setImageResource(R.drawable.ic_checked1);
                 adapter.notifyDataSetChanged();
 
             }else{
+                vh.tv_title.setTextColor(mContext.getResources().getColor(R.color.font_66));
+                vh.iv_show.setImageResource(R.drawable.ic_unchecked1);
                 vh.lv_content.setVisibility(View.GONE);
             }
             vh.lo_whole_title.setOnClickListener(new View.OnClickListener() {

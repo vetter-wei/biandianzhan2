@@ -22,8 +22,24 @@ public class PJBGDetailsBean {
      * ZY : 01
      * BGZT : 01
      */
-
-    private String YXBH;
+    // TODO: 2018-04-26
+    private String YXBH = "1";
+    private String PJZ = "80";
+    private String PJSJ = "2009-02-17";
+    private String OBJ_ID = "1";
+    private String SBLX = "1";
+    private String ZJRW_ID = "1";
+    private String PJSB_ID = "1";
+    private String DZMC = "朝阳变电站";
+    private String SBMC = "变电机组1";
+    private String PJMB_ID = "1";
+    private String SBLXMC = "1";
+    private String DZ_ID ="1";
+    private String ZY ="1";
+    private String BGZT = "01";//01编制02提交
+    private String PJXZ_ID = "1"; //评价细则
+    private String PJXZMC = "1"; //评价细则名称
+    /*private String YXBH;
     private String PJZ;
     private String PJSJ;
     private String OBJ_ID;
@@ -38,7 +54,7 @@ public class PJBGDetailsBean {
     private String ZY;
     private String BGZT;
     private String PJXZ_ID; //评价细则
-    private String PJXZMC; //评价细则名称
+    private String PJXZMC; //评价细则名称*/
 
     public String getPJXZ_ID() {
         return PJXZ_ID;

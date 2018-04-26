@@ -99,10 +99,14 @@ public class BaoGaoAdapter extends BaseAdapter {
         }
         if ("".equals(baoGaoList.get(i).getPJZ().trim())) {
             holder.pb_pjbg_jdt.setProgress(0);
-            holder.tv_pjbg_point.setText("未评价");
+            holder.tv_pjbg_point.setVisibility(View.GONE);
+            holder.tv_weipingjia.setVisibility(View.VISIBLE);
+            holder.tv_fen.setVisibility(View.GONE);
         } else {
-
-            holder.tv_pjbg_point.setText(baoGaoList.get(i).getPJZ() + "分");
+            holder.tv_fen.setVisibility(View.VISIBLE);
+            holder.tv_pjbg_point.setVisibility(View.VISIBLE);
+            holder.tv_weipingjia.setVisibility(View.GONE);
+            holder.tv_pjbg_point.setText(baoGaoList.get(i).getPJZ());
         }
         holder.lo_whole.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -138,6 +142,10 @@ public class BaoGaoAdapter extends BaseAdapter {
         @InjectView(R.id.tv_pjbg_point)
         TextView tv_pjbg_point;
 
+        @InjectView(R.id.tv_fen)
+        TextView tv_fen;
+        @InjectView(R.id.tv_weipingjia)
+        TextView tv_weipingjia;
         @InjectView(R.id.lo_whole)
         View lo_whole;
 

@@ -12,10 +12,12 @@ import android.support.v4.content.ContextCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -111,7 +113,11 @@ public class PJBGEditActivity extends BaseActivity implements View.OnClickListen
         init();
         initListener();
         initData();
-        BaoGaoAdapter.progressDialog.cancelProgressDialog();
+        // TODO: 2018-04-26
+        initFakeData();
+        if(BaoGaoAdapter.progressDialog !=null) {
+            BaoGaoAdapter.progressDialog.cancelProgressDialog();
+        }
 
     }
 
@@ -158,6 +164,43 @@ public class PJBGEditActivity extends BaseActivity implements View.OnClickListen
         });
     }
 
+    // TODO: 2018-04-26 虚假数据 
+    private void initFakeData() {
+
+
+        btxxList = new ArrayList<>();
+        BTSXBean btsxBean0 = new BTSXBean();
+        btsxBean0.setSXMC("变电站名称");
+        btsxBean0.setQZ("朝阳变电站");
+        BTSXBean btsxBean1 = new BTSXBean();
+        btsxBean1.setSXMC("设备型号");
+        btsxBean1.setQZ("朝阳变电站");
+        BTSXBean btsxBean2 = new BTSXBean();
+        btsxBean2.setSXMC("生产日期");
+        btsxBean2.setQZ("朝阳变电站");
+        BTSXBean btsxBean3 = new BTSXBean();
+        btsxBean3.setSXMC("运行编号");
+        btsxBean3.setQZ("朝阳变电站");
+        BTSXBean btsxBean4 = new BTSXBean();
+        btsxBean4.setSXMC("投运日期");
+        btsxBean4.setQZ("朝阳变电站");
+//        btzhxxBean = result.getRecords().get(0);
+        btxxList.add(btsxBean0);
+        btxxList.add(btsxBean1);
+        btxxList.add(btsxBean2);
+        btxxList.add(btsxBean3);
+        btxxList.add(btsxBean4);
+        //reSetData();
+        pjxzBean = new PJXZBean();
+        pjdxBeanList = new ArrayList<>();
+        PJDXBean bean0 = new PJDXBean();
+        PJDXBean bean1 = new PJDXBean();
+        pjdxBeanList.add(bean0);
+        pjdxBeanList.add(bean1);
+        reSetData();
+        freshUI();
+
+    }
     private void initData() {
         StringBuilder sb = new StringBuilder();
         //拼接请求体
@@ -349,7 +392,7 @@ public class PJBGEditActivity extends BaseActivity implements View.OnClickListen
                 break;
             case R.id.ic_filter:
                 //onBackPressed();
-                //todo  筛选跳转弹窗逻辑
+
                 drawerLayout.openDrawer(GravityCompat.END);
 
                 break;
@@ -363,37 +406,24 @@ public class PJBGEditActivity extends BaseActivity implements View.OnClickListen
 
             } else {
                 if ("变电站名称".equals(btsxBean.getSXMC())) {
-                    tv_ZFMC.setText(btsxBean.getSXMC() + ":" + btsxBean.getQZ());
+                    tv_ZFMC.setText( btsxBean.getQZ());
                 } else {
-                    TextView tv = new TextView(this);
+                    /*TextView tv = new TextView(this);
                     tv.setText(btsxBean.getSXMC() + ":" + btsxBean.getQZ());
-                    tv.setTextSize(16);
-                    ll_btxx.addView(tv);
+                    tv.setTextSize(16);*/
+                    final LinearLayout view = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.cell_btxx,
+                            ll_btxx, false);
+                    ((TextView)view.findViewById(R.id.tv_name)).setText(btsxBean.getSXMC());
+                    ((TextView)view.findViewById(R.id.tv_value)).setText(btsxBean.getQZ());
+                    ll_btxx.addView(view);
                 }
             }
         }
-//        if (btzhxxBean == null) return;
-//        tv_title.setText(StringUtil.nullToStr(btzhxxBean.getSBMC()));
-//        tv_ZFMC.setText("变电站名称：" + StringUtil.nullToStr(btzhxxBean.getZFMC()));
-//        tv_YXBH.setText(StringUtil.nullToStr(btzhxxBean.getYXBH()));
-//        tv_SCCJ.setText(StringUtil.nullToStr(btzhxxBean.getSCCJ()));
-//        tv_SBXH.setText(StringUtil.nullToStr(btzhxxBean.getSBXH()));
-//        if (!StringUtil.isNull(btzhxxBean.getSCRQ())) {
-//            tv_SCRQ.setText(StringUtil.nullToStr(btzhxxBean.getSCRQ().substring(0, 10)));
-//        } else {
-//            tv_SCRQ.setText(StringUtil.nullToStr(btzhxxBean.getSCRQ()));
-//        }
-//        if (!StringUtil.isNull(btzhxxBean.getTYRQ())) {
-//            tv_SCRQ.setText(StringUtil.nullToStr(btzhxxBean.getTYRQ().substring(0, 10)));
-//        } else {
-//            tv_SCRQ.setText(StringUtil.nullToStr(btzhxxBean.getTYRQ()));
-//        }
 
-        //tv_TYRQ.setText(StringUtil.nullToStr(btzhxxBean.getTYRQ()));
         SharedPreferencesHelper sharedPreferencesHelper = new SharedPreferencesHelper(getApplicationContext(), "PersonalInformation");
-        tv_USER.setText("签字人：" + StringUtil.nullToStr(sharedPreferencesHelper.getStringValue("RYMC")));
+        tv_USER.setText(StringUtil.nullToStr(sharedPreferencesHelper.getStringValue("RYMC")));
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
-        tv_DATE.setText("得分日期：" + sdf.format(new Date()));
+        tv_DATE.setText(sdf.format(new Date()));
         setScore(0);
         adapter = new PJDXEditAdapter(this, pjdxBeanList);
         lv_pjdx.setAdapter(adapter);
@@ -415,7 +445,7 @@ public class PJBGEditActivity extends BaseActivity implements View.OnClickListen
         }
 
         BigDecimal scoreB = new BigDecimal(score);
-        tv_FZ.setText(scoreB.add(new BigDecimal(fz)).setScale(2, BigDecimal.ROUND_HALF_UP).doubleValue() + "分");
+        tv_FZ.setText(scoreB.add(new BigDecimal(fz)).setScale(2, BigDecimal.ROUND_HALF_UP).doubleValue()+"");
         score = scoreB.add(new BigDecimal(fz)).setScale(2, BigDecimal.ROUND_HALF_UP).doubleValue();
         int progress = (int) (((score + fz) / totalscore) * 100);
         pr_fz.setProgress(progress);

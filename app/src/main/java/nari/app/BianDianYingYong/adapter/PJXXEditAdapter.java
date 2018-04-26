@@ -125,16 +125,16 @@ public class PJXXEditAdapter extends ArrayAdapter<PJXXBean> {
                 jcxBean.setKDFZ(Double.parseDouble(jcxBean.getKFZ()));
                 vh.tv_kdfz.setText(jcxBean.getKDFZ()+"");
                 vh.ic_has.setImageResource(R.drawable.ic_check);
-                vh.tv_has.setTextColor(0xff29cccc);
+                vh.tv_has.setTextColor(mContext.getResources().getColor(R.color.colorPrimary));
                 vh.ic_none.setImageResource(R.drawable.ic_uncheck);
-                vh.tv_none.setTextColor(0xff808080);
+                vh.tv_none.setTextColor(0xff999999);
             }else{
                 jcxBean.setKDFZ(0);
                 vh.tv_kdfz.setText(jcxBean.getKDFZ()+"");
                 vh.ic_has.setImageResource(R.drawable.ic_uncheck);
-                vh.tv_has.setTextColor(0xff808080);
+                vh.tv_has.setTextColor(0xff999999);
                 vh.ic_none.setImageResource(R.drawable.ic_check);
-                vh.tv_none.setTextColor(0xff29cccc);
+                vh.tv_none.setTextColor(mContext.getResources().getColor(R.color.colorPrimary));
             }
             //vh.lo_num.setVisibility(View.GONE);
             vh.tv_kdfz.setText(jcxBean.getKDFZ()+"");
@@ -156,9 +156,10 @@ public class PJXXEditAdapter extends ArrayAdapter<PJXXBean> {
 
                     vh.tv_kdfz.setText(jcxBean.getKDFZ()+"");
                     vh.ic_has.setImageResource(R.drawable.ic_check);
-                    vh.tv_has.setTextColor(0xff29cccc);
+                    vh.tv_has.setTextColor(mContext.getResources().getColor(R.color.colorPrimary));
+
                     vh.ic_none.setImageResource(R.drawable.ic_uncheck);
-                    vh.tv_none.setTextColor(0xff808080);
+                    vh.tv_none.setTextColor(0xff999999);
                     if(0!=jcxBean.getKDFZ()) {
                         jcxBean.setJCXJG("F");
                     }else{
@@ -180,9 +181,9 @@ public class PJXXEditAdapter extends ArrayAdapter<PJXXBean> {
                     }
 
                     vh.ic_has.setImageResource(R.drawable.ic_uncheck);
-                    vh.tv_has.setTextColor(0xff808080);
+                    vh.tv_has.setTextColor(0xff999999);
                     vh.ic_none.setImageResource(R.drawable.ic_check);
-                    vh.tv_none.setTextColor(0xff29cccc);
+                    vh.tv_none.setTextColor(mContext.getResources().getColor(R.color.colorPrimary));
                     if(0!=jcxBean.getKDFZ()) {
                         jcxBean.setJCXJG("F");
                     }else{

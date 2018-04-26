@@ -124,7 +124,7 @@ public class PJXXShowAdapter extends ArrayAdapter<PJXXBean> {
                 vh.tv_kdfz.setText(jcxBean.getKDFZ()+"");
                 vh.ic_has.setVisibility(View.GONE);
                 vh.ic_has.setImageResource(R.drawable.ic_check);
-                vh.tv_has.setTextColor(0xff29cccc);
+                vh.tv_has.setTextColor(mContext.getResources().getColor(R.color.colorPrimary));
                 vh.ic_none.setVisibility(View.GONE);
                 vh.tv_none.setVisibility(View.GONE);
             }else{
@@ -136,7 +136,7 @@ public class PJXXShowAdapter extends ArrayAdapter<PJXXBean> {
                 vh.ic_none.setVisibility(View.GONE);
                 vh.ic_none.setImageResource(R.drawable.ic_check);
                 vh.tv_none.setVisibility(View.VISIBLE);
-                vh.tv_none.setTextColor(0xff29cccc);
+                vh.tv_none.setTextColor(mContext.getResources().getColor(R.color.colorPrimary));
             }
             //vh.lo_num.setVisibility(View.GONE);
             vh.tv_kdfz.setText(jcxBean.getKDFZ()+"");

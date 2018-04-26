@@ -9,7 +9,20 @@ import net.tsz.afinal.annotation.sqlite.Table;
  */
 @Table(name="PJXZ")
 public class PJXZBean {
+    //// TODO: 2018-04-26
     @Id
+    private String OBJ_ID;//主键
+    private String RESULT;//操作是否成功 1：成功，0：失败
+    private String DESCRIPTION;//异常信息
+    private String XZBM;//细则编码
+    private String XZMC;//细则名称
+    private String XZFL;//细则分类 包括:01设备管理 02电站管理 来源:变电精益化公共代码表,代码类别为001
+    private String DZXZ;//电站性质
+    private String DF = "100";//得分
+    private String XH;//序号
+    private String ZY;//专业
+    private String SSBB;//所属版本
+    /*@Id
     private String OBJ_ID;//主键
     private String RESULT;//操作是否成功 1：成功，0：失败
     private String DESCRIPTION;//异常信息
@@ -20,7 +33,7 @@ public class PJXZBean {
     private String DF;//得分
     private String XH;//序号
     private String ZY;//专业
-    private String SSBB;//所属版本
+    private String SSBB;//所属版本*/
 
     public String getOBJ_ID() {
         return OBJ_ID;

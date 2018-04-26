@@ -12,7 +12,7 @@ public class BTSXBean {
      * QZ : 110kV龙王山变电站
      */
 
-    private String XZMC;
+    private String XZMC ;
     private String SXMC;
     private String QZ;
 

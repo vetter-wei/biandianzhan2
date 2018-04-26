@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
@@ -34,6 +35,8 @@ public class PJDXFilterAdapter extends ArrayAdapter<PJDXBean> {
 
         @InjectView(R.id.tv_title)
         TextView tv_title;
+        @InjectView(R.id.iv_show)
+        ImageView iv_show;
         @InjectView(R.id.lo_whole_title)
         View lo_whole_title;
 
@@ -64,10 +67,14 @@ public class PJDXFilterAdapter extends ArrayAdapter<PJDXBean> {
             if(bean.isChecked()){
                 final PJXMFilterAdapter adapter = new PJXMFilterAdapter(mContext,bean.getPjxmBeanList());
                 vh.lv_content.setAdapter(adapter);
+                vh.tv_title.setTextColor(mContext.getResources().getColor(R.color.colorPrimary));
                 vh.lv_content.setVisibility(View.VISIBLE);
+                vh.iv_show.setImageResource(R.drawable.ic_up);
                 adapter.notifyDataSetChanged();
 
             }else{
+                vh.tv_title.setTextColor(mContext.getResources().getColor(R.color.color33));
+                vh.iv_show.setImageResource(R.drawable.ic_down);
                 vh.lv_content.setVisibility(View.GONE);
             }
             vh.lo_whole_title.setOnClickListener(new View.OnClickListener() {
