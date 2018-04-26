@@ -1,6 +1,10 @@
 package nari.app.BianDianYingYong.adapter;
 
 import android.content.Context;
+import android.graphics.Color;
+import android.text.SpannableString;
+import android.text.Spanned;
+import android.text.style.ForegroundColorSpan;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -91,10 +95,14 @@ public class CheckAdapter extends BaseAdapter {
 //        }else if ("51".equals(status)) { //   已归档
 //
 //        }
+        SpannableString span = new SpannableString("详情："+ticketList.get(position).getCZRW());
+        span.setSpan(new ForegroundColorSpan(mContext.getResources().getColor(R.color.color_999999)), 0, 3, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        span.setSpan(new ForegroundColorSpan(Color.rgb(66,66,66)), 3, span.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
         SharedPreferencesHelper sharedPreferencesHelper = new SharedPreferencesHelper(mContext, "PersonalInformation");
         status = sharedPreferencesHelper.getStringValue("status");
         holder.tv_processed_fragment_bh.setText(ticketList.get(position).getPH());
-        holder.tv_processed_fragment_cznr.setText(ticketList.get(position).getCZRW());
+        //holder.tv_processed_fragment_cznr.setText(ticketList.get(position).getCZRW());
+        holder.tv_processed_fragment_cznr.setText(span);
         holder.tv_processed_fragment_czr.setText(ticketList.get(position).getZPBMMC());
         if (status.equals("2")) {
             List<TicketListBean> list = db.findAllByWhere(TicketListBean.class, "OBJ_ID  = \"" + ticketList.get(position).getOBJ_ID() + "\"");

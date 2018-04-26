@@ -172,12 +172,25 @@ public class ArchivedFragment extends android.support.v4.app.Fragment {
         }
     }
 
+    /*TODO 假数据，改完样式删除*/
+    private void parseTicketInfo(String t){
+
+        for ( int i = 1;i<9;i++ ) {
+            ArchivedTicketListBean ticket = new ArchivedTicketListBean();
+            ticket.setOBJ_ID(""+i);
+            ticket.setPH("江发路变电站"+i+i+i);
+            ticket.setCZRW("220kv普鸠2D53、普鸠2D54、普鸠2D59线路及普庆变220kVIA 母线启动送电");
+            ticket.setZPBMMC("张耀文");
+            ticket.setZPSJ("2016-11-0"+i+"  19:4"+i);
+            ticketList.add(ticket);
+        }
+    }
     /**
-     * 解析操作票列表数据
+     * 解析操作票列表数据 TODO 改完样式放开
      *
      * @author TQM
      */
-    private void parseTicketInfo(String t) {
+/*    private void parseTicketInfo(String t) {
         if (t == null && "".equals(t)) {
             Toast.makeText(getActivity(), "数据为空", Toast.LENGTH_SHORT).show();
         } else {
@@ -256,5 +269,6 @@ public class ArchivedFragment extends android.support.v4.app.Fragment {
         }
 
 
-    }
+    }*/
+
 }
