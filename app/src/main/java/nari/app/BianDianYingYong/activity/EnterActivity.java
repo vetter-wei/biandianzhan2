@@ -47,6 +47,7 @@ import static nari.mip.core.c.e;
 /**
  * Created by ShawDLee on 2017/12/26.
  *
+ *
  */
 
 public class EnterActivity extends BaseActivity implements View.OnClickListener {
