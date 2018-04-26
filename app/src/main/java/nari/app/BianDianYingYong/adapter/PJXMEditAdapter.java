@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
@@ -41,6 +42,8 @@ public class PJXMEditAdapter extends ArrayAdapter<PJXMBean> {
 
         @InjectView(R.id.tv_title)
         TextView tv_title;
+        @InjectView(R.id.iv_show)
+        ImageView iv_show;
 
         @InjectView(R.id.lv_content)
         CustomListView lv_content;
@@ -60,11 +63,11 @@ public class PJXMEditAdapter extends ArrayAdapter<PJXMBean> {
         vh = new PJXMEditAdapter.ViewHold(convertView);
         convertView.setTag(vh);
         final PJXMBean bean = getItem(position);
-        if((position+1)<=9){
+        /*if((position+1)<=9){
             vh.tv_num.setText(" "+(position+1)+" ");
         }else{
             vh.tv_num.setText((position+1)+"");
-        }
+        }*/
 
         vh.tv_title.setText(bean.getPJXMMC());
         if(bean.getPjxxBeanList() == null || bean.getPjxxBeanList().size() == 0){
@@ -73,12 +76,16 @@ public class PJXMEditAdapter extends ArrayAdapter<PJXMBean> {
 
             if(bean.isChecked()){
                 PJXXEditAdapter adapter = new PJXXEditAdapter(mContext,bean.getPjxxBeanList());
+                vh.tv_title.setTextColor(mContext.getResources().getColor(R.color.colorPrimary));
                 vh.lv_content.setAdapter(adapter);
                 vh.lv_content.setVisibility(View.VISIBLE);
+                vh.iv_show.setImageResource(R.drawable.ic_checked2);
                 adapter.notifyDataSetChanged();
 
             }else{
                 vh.lv_content.setVisibility(View.GONE);
+                vh.tv_title.setTextColor(mContext.getResources().getColor(R.color.font_66));
+                vh.iv_show.setImageResource(R.drawable.ic_unchecked2);
             }
             vh.lo_whole_title.setOnClickListener(new View.OnClickListener() {
                 @Override

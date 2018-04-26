@@ -13,6 +13,7 @@
         <!-- android:dividerHeight="@dimen/dimen_10" -->
 
         <ListView
+            android:layout_marginBottom="10dp"
             android:id="@+id/lv_fragment_baogao"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

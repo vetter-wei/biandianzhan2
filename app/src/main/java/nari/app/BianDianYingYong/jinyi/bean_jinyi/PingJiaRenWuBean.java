@@ -19,8 +19,18 @@ public class PingJiaRenWuBean {
      * DZMC : 柏泉变电站
      * ZJ_ID : 8a7073b660e8132c0160e83327f0000e
      */
-
-    private String PJJH_ID;
+    //// TODO: 2018-04-26
+    private String PJJH_ID ="1";
+    private String OBJ_ID  = "1";
+    private String RWZT ="1";
+    private String JSSJ = "2000-11-1 8:00";
+    private String PJRWMC ="避雷针精益化评价细则";
+    private String KSSJ ="2000-11-1 8:00";
+    private String DZ_ID ="1";
+    private String ZY ="1";
+    private String DZMC = "1";
+    private String ZJ_ID = "1";
+    /*private String PJJH_ID ;
     private String OBJ_ID;
     private String RWZT;
     private String JSSJ;
@@ -29,7 +39,7 @@ public class PingJiaRenWuBean {
     private String DZ_ID;
     private String ZY;
     private String DZMC;
-    private String ZJ_ID;
+    private String ZJ_ID;*/
 
     public String getPJJH_ID() {
         return PJJH_ID;

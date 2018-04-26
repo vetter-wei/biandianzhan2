@@ -7,23 +7,29 @@ import static nari.mip.core.a.a.s;
  */
 public class PingjiabaogaoBean {
 
-    /**
-     * PJZ :
-     * PJSJ :
-     * OBJ_ID : 628c0c9e-6b2d-6173-e053-36f3f00a43a90ti82a
-     * SBLX : 0322
-     * ZJRW_ID : 628c0c9e-6acc-6173-e053-36f3f00a43a9dfh7ot
-     * PJSB_ID : 6BCE602E-377B-42DA-9C64-BB21049826C7-71461
-     * DZMC : 柏泉变电站
-     * SBMC : 泉XV母开关柜
-     * PJMB_ID :
-     * SBLXMC : 开关柜
-     * DZ_ID : 69BF86AA-3912-4227-80A8-07DF09147E81-01127
-     * ZY : 01
-     * BGZT : 01
-     */
 
-    private String PJZ;
+    // TODO: 2018-04-26
+    private String PJZ = "1";
+    private String PJSJ ="2009-08-09";
+    private String OBJ_ID = "1";
+    private String SBLX ="1";
+    private String ZJRW_ID = "1";
+    private String PJSB_ID = "1";
+    private String DZMC = "朝阳变电站";
+    private String SBMC = "朝阳 220KV 变电机组";
+    private String PJMB_ID = "1";
+    private String SBLXMC = "1";
+    private String DZ_ID = "1";
+    private String ZY = "1";
+    private String PJRWMC = "主变压器";
+
+    private String BGZT = "01";//01编制02提交
+
+    private String YXBH = "朝 220KV";
+    private String DYDJ = "220KV";
+    private String PJXZ_ID = "1"; //评价细则
+    private String PJXZMC = "1"; //评价细则名称
+    /*private String PJZ;
     private String PJSJ;
     private String OBJ_ID;
     private String SBLX;
@@ -42,7 +48,7 @@ public class PingjiabaogaoBean {
     private String YXBH;
     private String DYDJ;
     private String PJXZ_ID; //评价细则
-    private String PJXZMC; //评价细则名称
+    private String PJXZMC; //评价细则名称*/
 
     public String getPJRWMC() {
         return PJRWMC;

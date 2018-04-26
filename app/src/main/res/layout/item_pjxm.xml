@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
     <View
-        android:background="@drawable/dash_line_dark"
+        android:background="#f2f2f2"
         android:layout_width="match_parent"
         android:layerType="software"
         android:layout_height="1dp"/>
@@ -13,12 +13,12 @@
         android:paddingLeft="10dp"
         android:orientation="horizontal"
         android:layout_width="wrap_content"
-        android:layout_height="30dp">
+        android:layout_height="40dp">
         <TextView
-            android:background="@drawable/circle_orange_black"
+
             android:id="@+id/tv_num"
-            android:text=" 1 "
-            android:textColor="@color/black"
+            android:text=" - "
+            android:textColor="@color/colorPrimary"
             android:textSize="16sp"
             android:layout_centerVertical="true"
             android:layout_width="wrap_content"
@@ -34,12 +34,13 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent" />
         <ImageView
+            android:id="@+id/iv_show"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="15dp"
-            android:src="@drawable/ic_stretch2"
-            android:layout_width="20dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/ic_unchecked2"
+            android:layout_width="18dp"
             android:layout_centerVertical="true"
-            android:layout_height="20dp" />
+            android:layout_height="18dp" />
     </RelativeLayout>
 
     <nari.app.BianDianYingYong.customview.CustomListView

@@ -5,6 +5,7 @@ import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.IdRes;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -20,6 +21,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -119,6 +121,9 @@ public class MainActivity_jinyi extends BaseActivity implements View.OnClickList
     private RadioButton rb_bg_330;
     private RadioButton rb_bg_500;
     private RadioButton rb_bg_750;
+
+    private RadioButton rb_bg;
+    private RadioButton rb_rw;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -290,7 +295,7 @@ public class MainActivity_jinyi extends BaseActivity implements View.OnClickList
             }
         }
     }
-
+    MyRadioGroup rg_change;
     /**
      * 初始化页面控件
      */
@@ -312,6 +317,7 @@ public class MainActivity_jinyi extends BaseActivity implements View.OnClickList
         radioGroup_sblx = findViewById(R.id.rg_pjbg_sblx);
         radioGroup_dydj = findViewById(R.id.rg_pjbg_dydj);
         rb_bg_110 = findViewById(R.id.rb_bg_110);
+
         rb_bg_220 = findViewById(R.id.rb_bg_220);
         rb_bg_1000 = findViewById(R.id.rb_bg_1000);
         rb_bg_10 = findViewById(R.id.rb_bg_10);
@@ -351,14 +357,17 @@ public class MainActivity_jinyi extends BaseActivity implements View.OnClickList
         rb_hlzkz = findViewById(R.id.rb_hlzkz);
         rb_clbc = findViewById(R.id.rb_clbc);
         rb_wgfsqs = findViewById(R.id.rb_wgfsqs);
+        rb_bg = findViewById(R.id.rb_bg);
+        rb_rw = findViewById(R.id.rb_rw);
+        rg_change = findViewById(R.id.rg_change);
         //  vp_main_activity.setOffscreenPageLimit(3);//设置预加载的fragment个数，防止调取动态数据时，listview会显示空白，原因：就是onCreateView每次都调用导致的，这样fragment每次都会设置新的view，而调试发现，之前的view并没有被回收……这就导致了，新的view覆盖了之前设置的view，
 //        navigationView = (NavigationView) findViewById(R.id.nav_view);
         adapter = new MainVPAdapter_jinyi(getSupportFragmentManager(), getApplicationContext());
         vp.setAdapter(adapter);
         // tab_bar.setTabMode(TabLayout.MODE_SCROLLABLE);
         tab_bar.setupWithViewPager(vp);
-        String[] titles = {"评价报告", "评价任务"};
-        for (int i = 0; i < tab_bar.getTabCount(); i++) {
+        //String[] titles = {"评价报告", "评价任务"};
+        /*for (int i = 0; i < tab_bar.getTabCount(); i++) {
 
             TabLayout.Tab tab = tab_bar.getTabAt(i);
             View view = null;
@@ -376,7 +385,7 @@ public class MainActivity_jinyi extends BaseActivity implements View.OnClickList
                     tab.setCustomView(view);
                 }
             }
-        }
+        }*/
         //reflex(tab_bar);
         vp.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
@@ -389,9 +398,13 @@ public class MainActivity_jinyi extends BaseActivity implements View.OnClickList
                 if (position == 0) {
                     ll_renwu_screen.setVisibility(View.GONE);
                     ll_report_screen.setVisibility(View.VISIBLE);
+                    rb_bg.setChecked(true);
+                    rb_rw.setChecked(false);
                 } else if (position == 1) {
                     ll_renwu_screen.setVisibility(View.VISIBLE);
                     ll_report_screen.setVisibility(View.GONE);
+                    rb_bg.setChecked(false);
+                    rb_rw.setChecked(true);
                 }
             }
 
@@ -410,6 +423,24 @@ public class MainActivity_jinyi extends BaseActivity implements View.OnClickList
         tv_pjrw_screen_jssj.setOnClickListener(this);
         tv_screen_reset.setOnClickListener(this);
         tv_screen_sure.setOnClickListener(this);
+        rg_change.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, @IdRes int checkedId) {
+                switch (checkedId){
+                    case R.id.rb_bg:
+                        ll_renwu_screen.setVisibility(View.GONE);
+                        ll_report_screen.setVisibility(View.VISIBLE);
+                        vp.setCurrentItem(0);
+                        break;
+                    case R.id.rb_rw:
+                        ll_renwu_screen.setVisibility(View.VISIBLE);
+                        ll_report_screen.setVisibility(View.GONE);
+                        vp.setCurrentItem(1);
+                        break;
+
+                }
+            }
+        });
     }
 
     @Override

@@ -3,11 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-    <View
-        android:background="#cccccc"
-        android:layout_width="match_parent"
-        android:layerType="software"
-        android:layout_height="1px"/>
+
     <RelativeLayout
         android:id="@+id/lo_whole_title"
         android:paddingLeft="10dp"
@@ -15,7 +11,7 @@
         
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="30dp">
+        android:layout_height="40dp">
         <TextView
             android:id="@+id/tv_title"
             android:text="1212121"
@@ -26,7 +22,8 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent" />
         <ImageView
-            android:layout_alignParentLeft="true"
+            android:id="@+id/iv_show"
+            android:layout_alignParentRight="true"
             android:src="@drawable/ic_down"
             android:layout_width="20dp"
             android:layout_centerVertical="true"

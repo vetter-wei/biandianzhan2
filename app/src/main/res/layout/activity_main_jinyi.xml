@@ -44,13 +44,58 @@
                 android:src="@mipmap/search_menu" />
         </RelativeLayout>
         <RelativeLayout
+            android:background="@color/color_f2f2f2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <View
                 android:background="@color/line_fc"
                 android:layout_width="match_parent"
                 android:layout_height="17dp"/>
+            <nari.app.BianDianYingYong.jinyi.customview_jinyi.MyRadioGroup
+                android:id="@+id/rg_change"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:orientation="horizontal"
+                android:elevation="5dp"
+                android:background="@drawable/cornor_btn"
+                android:layout_centerHorizontal="true"
+                android:layout_width="match_parent"
+                android:layout_height="35dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:orientation="horizontal">
+                    <RadioButton
+                        android:id="@+id/rb_bg"
+                        android:layout_width="0dp"
+                        android:text="评价报告"
+                        android:button="@null"
+                        android:layout_weight="1"
+                        android:checked="true"
+                        android:background="@drawable/btn_left_corner"
+
+                        android:gravity="center"
+                        android:textSize="18sp"
+
+                        android:textColor="@color/pjbg_seceen_text_selector"
+                        android:layout_height="match_parent" />
+                    <RadioButton
+                        android:id="@+id/rb_rw"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_right_cornor"
+                        android:button="@null"
+                        android:text="评价任务"
+                        android:textSize="18sp"
+                        android:textColor="@color/pjbg_seceen_text_selector"
+                        android:gravity="center"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+            </nari.app.BianDianYingYong.jinyi.customview_jinyi.MyRadioGroup>
             <android.support.design.widget.TabLayout
+                android:visibility="gone"
                 android:layout_marginBottom="5dp"
                 android:id="@+id/tab_bar_jinyi"
                 android:layout_width="match_parent"
@@ -66,7 +111,7 @@
                 android:layout_centerHorizontal="true"
                 app:tabIndicatorColor="@color/transparent"
 
-                app:tabBackground="@color/tabcloor"
+                app:tabBackground="@drawable/tab_backgroud"
                 app:tabMinWidth="100dp"
                 app:tabSelectedTextColor="#ffffff"
                 app:tabTextAppearance="@style/TabLayoutTextStyle"

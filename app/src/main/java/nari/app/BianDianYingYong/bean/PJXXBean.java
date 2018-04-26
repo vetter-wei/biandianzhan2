@@ -12,7 +12,27 @@ import java.util.List;
  */
 @Table(name="PJXX1")
 public class PJXXBean {
+    //// TODO: 2018-04-26
     @Id
+    private String OBJ_ID = "1";//主键
+    private String RESULT = "";//操作是否成功 1：成功，0：失败
+    private String DESCRIPTION = "";//异常信息
+    private String PJXM_ID = "";//评价项目_主键
+    private String PJXXBM = "";//评价小项编码
+    private String PJXXMS = "评价小项描述";//评价小项描述
+    private String JCFS = "检查方式";//检查方式
+    private String KFFS ="扣分方式";//扣分方式
+    private String KFZH = "扣分组合";//扣分组合
+    private String ZHFS = "组合方式";//组合方式
+    private String KFYZ = "扣分原则";//扣分原则
+    private boolean isChecked = false;//是否选中
+    JCXBean jcxBean;
+
+    public PJXXBean() {
+        super();
+        jcxBean = new JCXBean();
+    }
+    /*@Id
     private String OBJ_ID = "";//主键
     private String RESULT = "";//操作是否成功 1：成功，0：失败
     private String DESCRIPTION = "";//异常信息
@@ -25,7 +45,7 @@ public class PJXXBean {
     private String ZHFS = "";//组合方式
     private String KFYZ = "";//扣分原则
     private boolean isChecked = false;//是否选中
-    JCXBean jcxBean;
+    JCXBean jcxBean;*/
 
     public boolean isChecked() {
         return isChecked;

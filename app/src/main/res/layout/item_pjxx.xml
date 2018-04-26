@@ -9,7 +9,7 @@
     <LinearLayout
 
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:orientation="horizontal">
 
         <ImageView
@@ -26,11 +26,12 @@
             android:layout_marginLeft="5dp"
             android:text="dsdadasdsadsadsadsadsadsa"
             android:textColor="@color/black"
-            android:textSize="15sp" />
+            android:textSize="16sp" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="wrap_content"
+        android:minHeight="40dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
@@ -48,31 +49,33 @@
             android:layout_marginLeft="5dp"
             android:text="dsdadasdsadsadsadsadsadsadsdadasdsadsadsadsadsadsadsdadasdsadsadsadsadsadsa"
             android:textColor="@color/black"
-            android:textSize="15sp" />
+            android:textSize="16sp" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:orientation="vertical">
 
             <LinearLayout
                 android:id="@+id/lo_has"
+                android:orientation="horizontal"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="40dp">
 
                 <TextView
+                    android:layout_gravity="center_vertical"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="是否扣分"
                     android:textColor="#808080"
-                    android:textSize="15sp" />
+                    android:textSize="16sp" />
 
                 <ImageView
                     android:id="@+id/ic_none"
@@ -84,15 +87,17 @@
 
                 <TextView
                     android:id="@+id/tv_none"
+                    android:layout_gravity="center_vertical"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="13dp"
                     android:text="否"
-                    android:textColor="#29cccc"
+                    android:textColor="@color/colorPrimary"
                     android:textSize="15sp" />
 
                 <ImageView
                     android:id="@+id/ic_has"
+
                     android:layout_width="18dp"
                     android:layout_height="18dp"
                     android:layout_gravity="center_vertical"
@@ -105,6 +110,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="13dp"
                     android:text="是"
+                    android:layout_gravity="center_vertical"
                     android:textColor="#808080"
                     android:textSize="15sp" />
 
@@ -112,15 +118,17 @@
 
             <LinearLayout
                 android:id="@+id/lo_num"
+                android:orientation="horizontal"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="40dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="发现次数"
+                    android:layout_gravity="center_vertical"
                     android:textColor="#808080"
-                    android:textSize="15sp" />
+                    android:textSize="16sp" />
 
                 <ImageView
                     android:id="@+id/ic_minus"
@@ -136,6 +144,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15dp"
                     android:text="0"
+                    android:layout_gravity="center_vertical"
                     android:textColor="#808080"
                     android:textSize="15sp" />
 
@@ -151,11 +160,13 @@
             </LinearLayout>
 
             <LinearLayout
+                android:orientation="horizontal"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp">
+                android:layout_height="40dp"
+                >
 
                 <TextView
+                    android:layout_gravity="center_vertical"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="扣分值"
@@ -163,6 +174,7 @@
                     android:textSize="15sp" />
 
                 <TextView
+                    android:layout_gravity="center_vertical"
                     android:id="@+id/tv_kdfz"
                     android:layout_width="33dp"
                     android:layout_height="wrap_content"
@@ -172,90 +184,75 @@
                     android:text="0"
                     android:textColor="@color/red"
                     android:textSize="15sp" />
+                <LinearLayout
+                    android:id="@+id/lo_kfyz"
+                    android:layout_marginLeft="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
 
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/ic_kfyz" />
+
+                    <TextView
+
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="扣分原则"
+                        android:textColor="#999999"
+                        android:textSize="14sp" />
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
             android:orientation="horizontal">
 
-            <LinearLayout
-                android:id="@+id/lo_camera"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
 
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_gravity="center_horizontal"
-                    android:src="@drawable/ic_camera" />
-
-                <TextView
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginTop="5dp"
-                    android:gravity="center"
-                    android:text="拍照上传"
-                    android:textColor="#29cccc"
-                    android:textSize="14sp" />
-            </LinearLayout>
 
             <LinearLayout
+
+                android:layout_gravity="center_vertical"
                 android:id="@+id/lo_suggestion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
 
+                android:orientation="vertical">
                 <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
                     android:layout_gravity="center_horizontal"
                     android:src="@drawable/ic_suggestion" />
 
-                <TextView
 
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginTop="5dp"
-                    android:gravity="center"
-                    android:text="描述/建议"
-                    android:textColor="#29cccc"
-                    android:textSize="14sp" />
             </LinearLayout>
-
             <LinearLayout
-                android:id="@+id/lo_kfyz"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/lo_camera"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/ic_question" />
+                    android:src="@drawable/ic_camera" />
 
-                <TextView
 
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginTop="5dp"
-                    android:gravity="center"
-                    android:text="扣分原则"
-                    android:textColor="#29cccc"
-                    android:textSize="14sp" />
             </LinearLayout>
+
         </LinearLayout>
     </LinearLayout>
 

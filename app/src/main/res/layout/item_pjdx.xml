@@ -3,29 +3,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-    <View
-        android:background="#f2f2f2"
-        android:layout_width="match_parent"
-        android:layerType="software"
-        android:layout_height="1dp"/>
+
     <RelativeLayout
         android:id="@+id/lo_whole_title"
         android:paddingLeft="8dp"
         android:paddingRight="10dp"
         android:orientation="horizontal"
         android:layout_width="wrap_content"
-        android:layout_height="30dp">
+        android:layout_height="40dp">
         <TextView
             android:id="@+id/tv_title"
             android:text="1212121"
-            android:textColor="#29cccc"
+            android:textColor="@color/colorPrimary"
             android:textSize="18sp"
             android:gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="match_parent" />
         <ImageView
+            android:id="@+id/iv_show"
             android:layout_alignParentRight="true"
-            android:src="@drawable/ic_stretch"
+            android:src="@drawable/ic_unchecked1"
             android:layout_width="20dp"
             android:layout_centerVertical="true"
             android:layout_height="20dp" />
@@ -39,5 +36,9 @@
         android:layout_height="wrap_content">
 
     </nari.app.BianDianYingYong.customview.CustomListView>
-
+   <!-- <View
+        android:background="#f2f2f2"
+        android:layout_width="match_parent"
+        android:layerType="software"
+        android:layout_height="1dp"/>-->
 </LinearLayout>

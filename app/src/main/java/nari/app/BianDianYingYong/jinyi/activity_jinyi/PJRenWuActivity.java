@@ -202,6 +202,18 @@ public class PJRenWuActivity extends BaseActivity {
     private void parsePJRWDetails(String t) {
         if (t == null || "".equals(t)) {
             Toast.makeText(getApplicationContext(), "数据为空", Toast.LENGTH_SHORT).show();
+            // TODO: 2018-04-26
+            PJBGDetailsBean bean = new PJBGDetailsBean();
+            PJBGDetailsBean bean1 = new PJBGDetailsBean();
+            PJBGDetailsBean bean2 = new PJBGDetailsBean();
+            bean.setPJZ("");
+            baoGaoDetailsList.add(bean);
+            bean1.setBGZT("02");
+            baoGaoDetailsList.add(bean1);
+            bean1.setBGZT("02");
+            baoGaoDetailsList.add(bean2);
+            // TODO: 2018-04-26
+
         } else {
             ResultBean<PJBGDetailsBean> result = ResultBean.fromJson(t, PJBGDetailsBean.class);
             //baoGaoList=result.getRecords();

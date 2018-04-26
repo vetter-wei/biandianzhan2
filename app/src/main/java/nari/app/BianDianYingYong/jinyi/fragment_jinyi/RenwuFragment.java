@@ -55,7 +55,7 @@ public class RenwuFragment extends android.support.v4.app.Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        // TODO Auto-generated method stub
+
         View v = LayoutInflater.from(getActivity()).inflate(R.layout.fragment_renwu, null);
         pf_fragment_renwu = v.findViewById(R.id.pf_fragment_renwu);
         lv_fragment_renwu = v.findViewById(R.id.lv_fragment_renwu);
@@ -191,6 +191,14 @@ public class RenwuFragment extends android.support.v4.app.Fragment {
     private void parseTicketInfo(String t) {
         if (t == null || "".equals(t)) {
             Toast.makeText(getActivity(), "数据为空", Toast.LENGTH_SHORT).show();
+            // TODO 需清楚此处虚假数据
+            PingJiaRenWuBean bean  = new PingJiaRenWuBean();
+            PingJiaRenWuBean bean1  = new PingJiaRenWuBean();
+            PingJiaRenWuBean bean2  = new PingJiaRenWuBean();
+            renWuList.add(bean);
+            renWuList.add(bean1);
+            renWuList.add(bean2);
+            // TODO 需清楚此处虚假数据
         } else {
             ResultBean<PingJiaRenWuBean> result = ResultBean.fromJson(t, PingJiaRenWuBean.class);
             //baoGaoList=result.getRecords();

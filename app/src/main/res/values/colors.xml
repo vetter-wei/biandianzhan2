@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#0098FC</color>
+    <color name="color33">#333333</color>
     <color name="colorPrimaryDark">#0098FC</color>
     <color name="colorAccent">#0098FC</color>
     <color name="colorFill">#124f7e</color>
@@ -12,7 +13,7 @@
     <color name="colorProject">#f6514d</color>
     <color name="colorSP">#6b94b4</color>
     <color name="colorBottom">#8c8c8c</color>
-    <color name="colorFc">#fcfcfc</color>
+    <color name="colorFc">#f2f2f2</color>
     <color name="color6">#a7d0ea</color>
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
@@ -75,4 +76,5 @@
     <color name="font_7a7a7a">#7a7a7a</color>
     <color name="font_333333">#333333</color>
     <color name="font_fdb96d">#fdb96d</color>
+    <color name="font_66">#666666</color>
 </resources>

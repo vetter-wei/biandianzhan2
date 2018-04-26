@@ -11,7 +11,32 @@ import java.io.Serializable;
  */
 @Table(name="JCX1")
 public class JCXBean  {
+    // TODO: 2018-04-26
     @Id
+    private String OBJ_ID="";//主键
+    private String RESULT = "";//操作是否成功 1：成功，0：失败
+    private String DESCRIPTION = "";//异常信息
+    private String PJXX_ID = "";//评价小项_主键
+    private String JCXBM = "";//检查项编码
+    private String JCXZLX = "";//检查项值类型
+    private String JCXMS = "";//检查项描述 发现次数
+    private String JCYQXXLJF= "";//检查要求下限逻辑符
+    private String JCYQXX = "";//检查要求下限
+    private String JCYQSXLJF = "";//检查要求上限逻辑符
+    private String JCYQSX = "";//检查要求上限
+    private String KFZ = "";//扣分值
+    private String SFXS = "";//是否显示：1是、0否
+    private String SFQY = "";//是否启用：1是、0否
+    private String SFSZ = "1";//是否数值：1是、0否,当选择是的时候,表示检查项为描述的值为扣分倍数
+    private String JCXJG = "T";//检查项结果,T为未扣分F为已扣分
+    private String PJXXJG_ID = "";//评价小项结果ID
+    private double KDFZ = 0;//扣得分值
+    private String WTMS = "问题描述";//问题描述
+    private String CLJY = "处理建议";//处理建议
+    private String PJSJ = "";//评价时间
+    private String ZTZT = "02";//粘贴状态
+
+    /*@Id
     private String OBJ_ID="";//主键
     private String RESULT = "";//操作是否成功 1：成功，0：失败
     private String DESCRIPTION = "";//异常信息
@@ -33,7 +58,7 @@ public class JCXBean  {
     private String WTMS = "";//问题描述
     private String CLJY = "";//处理建议
     private String PJSJ = "";//评价时间
-    private String ZTZT = "02";//粘贴状态
+    private String ZTZT = "02";//粘贴状态*/
 
     public String getJCXJG() {
         return JCXJG;

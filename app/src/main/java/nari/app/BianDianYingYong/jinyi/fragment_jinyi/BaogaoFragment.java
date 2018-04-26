@@ -179,6 +179,15 @@ public class BaogaoFragment extends android.support.v4.app.Fragment {
     private void parseTicketInfo(String t) {
         if (t == null || "".equals(t)) {
             Toast.makeText(getActivity(), "数据为空", Toast.LENGTH_SHORT).show();
+            // TODO: 2018-04-26
+            PingjiabaogaoBean bean = new PingjiabaogaoBean();
+            PingjiabaogaoBean bean1 = new PingjiabaogaoBean();
+            PingjiabaogaoBean bean2 = new PingjiabaogaoBean();
+            baoGaoList.add(bean);
+            bean1.setPJZ("");
+            baoGaoList.add(bean1);
+            baoGaoList.add(bean2);
+            // TODO: 2018-04-26
         } else {
             ResultBean<PingjiabaogaoBean> result = ResultBean.fromJson(t, PingjiabaogaoBean.class);
             //baoGaoList=result.getRecords();

@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
@@ -74,18 +75,24 @@ public class PingJiaBaoGaoAdapter extends BaseAdapter {
         }
         String bgzt = baoGaoDetailsList.get(i).getBGZT();
         if ("01".equals(bgzt)) {
-            holder.tv_pjrwDetails_bz.setVisibility(View.VISIBLE);
-            holder.tv_pjrwDetails_tj.setVisibility(View.GONE);
+
+            holder.tv_pjrwDetails_tj.setImageResource(R.mipmap.ic_state_edit);
         } else if ("02".equals(bgzt)) {
-            holder.tv_pjrwDetails_bz.setVisibility(View.GONE);
-            holder.tv_pjrwDetails_tj.setVisibility(View.VISIBLE);
+
+            holder.tv_pjrwDetails_tj.setImageResource(R.mipmap.ic_state_submit);
         }
         if ("".equals(baoGaoDetailsList.get(i).getPJZ().trim())) {
-            holder.pb_pjrwDetails_jdt.setProgress(0);
-            holder.tv_pjrwDetails_point.setText("未评价");
+
+            holder.tv_pjrwDetails_point.setVisibility(View.GONE);
+            holder.tv_weipingjia.setVisibility(View.VISIBLE);
+            holder.tv_fen.setVisibility(View.GONE);
         } else {
             //holder.pb_pjrwDetails_jdt.setProgress(Integer.parseInt(baoGaoDetailsList.get(i).getPJZ().trim()));
-            holder.tv_pjrwDetails_point.setText(baoGaoDetailsList.get(i).getPJZ() + "分");
+
+            holder.tv_fen.setVisibility(View.VISIBLE);
+            holder.tv_pjrwDetails_point.setVisibility(View.VISIBLE);
+            holder.tv_weipingjia.setVisibility(View.GONE);
+            holder.tv_pjrwDetails_point.setText(baoGaoDetailsList.get(i).getPJZ());
         }
         holder.lo_whole.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -115,9 +122,11 @@ public class PingJiaBaoGaoAdapter extends BaseAdapter {
         @InjectView(R.id.pb_pjrwDetails_jdt)
         CircleNumberProgressBar pb_pjrwDetails_jdt;
         @InjectView(R.id.tv_pjrwDetails_tj)
-        TextView tv_pjrwDetails_tj;
-        @InjectView(R.id.tv_pjrwDetails_bz)
-        TextView tv_pjrwDetails_bz;
+        ImageView tv_pjrwDetails_tj;
+        @InjectView(R.id.tv_fen)
+        TextView tv_fen;
+        @InjectView(R.id.tv_weipingjia)
+        TextView tv_weipingjia;
         @InjectView(R.id.lo_whole)
         View lo_whole;
 
