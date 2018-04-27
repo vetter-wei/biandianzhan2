@@ -51,10 +51,10 @@ import static nari.mip.core.c.e;
  */
 
 public class EnterActivity extends BaseActivity implements View.OnClickListener {
-    private TextView tv_enter_caozuopiao;
-    private TextView tv_enter_jingyihua;
-    private TextView tv_enter_cache;
-    private TextView tv_jyh_enter_cache;
+    private View tv_enter_caozuopiao;
+    private View tv_enter_jingyihua;
+    private View tv_enter_cache;
+    private View tv_jyh_enter_cache;
     private SharedPreferencesHelper sharedPreferencesHelper;
 
     @Override
@@ -82,8 +82,8 @@ public class EnterActivity extends BaseActivity implements View.OnClickListener 
     private void initView() {
         tv_enter_caozuopiao = findViewById(R.id.tv_enter_caozuopiao);
         tv_enter_jingyihua = findViewById(R.id.tv_enter_jingyihua);
-        tv_enter_cache = (TextView) findViewById(R.id.tv_enter_cache);
-        tv_jyh_enter_cache = (TextView) findViewById(R.id.tv_jyh_enter_cache);
+        tv_enter_cache =  findViewById(R.id.tv_enter_cache);
+        tv_jyh_enter_cache =  findViewById(R.id.tv_jyh_enter_cache);
         initListener();
     }
 

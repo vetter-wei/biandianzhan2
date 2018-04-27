@@ -3,121 +3,165 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
     <View
         android:id="@+id/view_title"
+
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dimen_24" />
+        android:layout_height="@dimen/dimen_25"
+        android:background="#43BDF8" />
+    <!--<View
+        android:id="@+id/view_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_24" />-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="395dp"
-        android:background="@drawable/homepage_logo">
+        android:layout_height="wrap_content"
+       >
+
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="@dimen/dimen_10"
+            android:layout_height="@dimen/dimen_43"
             android:background="#43BDF8">
 
+            <View
+                android:id="@+id/view1_title"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_1" />
+
+
             <TextView
+                android:id="@+id/tv_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
-                android:padding="@dimen/dimen_10"
+                android:layout_centerInParent="true"
+                android:gravity="center"
                 android:text="变电五通应用"
-                android:textColor="@color/white"
-                android:textSize="@dimen/textsize_24" />
+                android:textColor="@color/colorTitle"
+                android:textSize="20sp" />
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:id="@+id/ic_filter"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
-                android:layout_marginRight="@dimen/dimen_13"
-                android:src="@mipmap/popupwindow_lxhc" />
+                android:layout_marginRight="10dp"
+                android:src="@drawable/ic_op" />
         </RelativeLayout>
-
     </LinearLayout>
-
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dimen_160"
-        android:layout_marginTop="-70dp"
-        android:background="@color/colorFc"
-        android:orientation="horizontal">
+        android:layout_height="340dp">
         <RelativeLayout
-            android:layout_width="0dp"
-            android:layout_height="@dimen/dimen_160"
-            android:layout_weight="1">
-            <LinearLayout
-                android:layout_width="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:background="@drawable/homepage_logo"
+
+
+            android:orientation="horizontal">
+
+
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
-                android:orientation="vertical">
-                <ImageView
-                    android:layout_width="@dimen/dimen_74"
-                    android:layout_height="@dimen/dimen_74"
-                    android:src="@drawable/homepage_caozuopiao"/>
-                <TextView
+                android:layout_weight="1">
+                <LinearLayout
                     android:id="@+id/tv_enter_caozuopiao"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/textsize_20"
-                    android:layout_marginTop="@dimen/dimen_9"
-                    android:layout_marginLeft="@dimen/dimen_5"
-                    android:text="操作票"
-                    android:textColor="@color/color_4d4d4d"/>
-            </LinearLayout>
-        </RelativeLayout>
+                    android:orientation="vertical"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true">
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/homepage_caozuopiao"/>
+                    <TextView
 
-        <View
-            android:layout_width="@dimen/dimen_1"
-            android:layout_height="@dimen/dimen_74"
-            android:background="@color/line_color"
-            android:layout_marginTop="@dimen/dimen_35"/>
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/textsize_17"
+                        android:layout_marginTop="@dimen/dimen_9"
+                        android:layout_marginLeft="@dimen/dimen_5"
+                        android:text="操作票"
+                        android:textColor="@color/color_4d4d4d"/>
+                </LinearLayout>
+            </RelativeLayout>
 
-        <RelativeLayout
-            android:layout_width="0dp"
-            android:layout_height="@dimen/dimen_160"
-            android:layout_weight="1">
-            <LinearLayout
-                android:layout_width="wrap_content"
+            <View
+                android:layout_width="@dimen/dimen_1"
+                android:layout_height="match_parent"
+                android:background="@color/line_color"
+                android:layout_marginBottom="20dp"
+
+                android:layout_marginTop="@dimen/dimen_20"/>
+
+            <RelativeLayout
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
-                android:orientation="vertical">
-                <ImageView
-                    android:layout_width="@dimen/dimen_74"
-                    android:layout_height="@dimen/dimen_74"
-                    android:layout_marginLeft="@dimen/dimen_10"
-                    android:src="@drawable/homepage_jingyihua"/>
-                <TextView
+                android:layout_weight="1">
+                <LinearLayout
                     android:id="@+id/tv_enter_jingyihua"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/textsize_20"
-                    android:layout_marginTop="@dimen/dimen_9"
-                    android:text="精益化评价"
-                    android:textColor="@color/color_4d4d4d"/>
-            </LinearLayout>
-        </RelativeLayout>
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="@dimen/dimen_10"
+                        android:src="@drawable/homepage_jingyihua"/>
+                    <TextView
 
-    </LinearLayout>
-    <TextView
-        android:id="@+id/tv_enter_cache"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-    <TextView
-        android:id="@+id/tv_jyh_enter_cache"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/textsize_17"
+                        android:layout_marginTop="@dimen/dimen_9"
+                        android:text="精益化评价"
+                        android:textColor="@color/color_4d4d4d"/>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+
+
 
     <!--背景图-->
     <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/homepage_bg"></LinearLayout>
+        android:background="@drawable/homepage_bg">
+        <TextView
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/tv_enter_cache"
+            android:layout_marginTop="20dp"
+            android:text="操作票离线入口"
+            android:textSize="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:text="精益化评价离线入口"
+            android:textSize="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/tv_jyh_enter_cache"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
 
 
 </LinearLayout>
