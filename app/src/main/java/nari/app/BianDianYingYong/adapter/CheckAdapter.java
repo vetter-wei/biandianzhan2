@@ -97,7 +97,7 @@ public class CheckAdapter extends BaseAdapter {
 //        }
         SpannableString span = new SpannableString("详情："+ticketList.get(position).getCZRW());
         span.setSpan(new ForegroundColorSpan(mContext.getResources().getColor(R.color.color_999999)), 0, 3, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-        span.setSpan(new ForegroundColorSpan(Color.rgb(66,66,66)), 3, span.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        span.setSpan(new ForegroundColorSpan(mContext.getResources().getColor(R.color.font_66)), 3, span.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
         SharedPreferencesHelper sharedPreferencesHelper = new SharedPreferencesHelper(mContext, "PersonalInformation");
         status = sharedPreferencesHelper.getStringValue("status");
         holder.tv_processed_fragment_bh.setText(ticketList.get(position).getPH());

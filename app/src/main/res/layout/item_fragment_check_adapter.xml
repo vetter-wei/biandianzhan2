@@ -9,6 +9,8 @@
         android:layout_height="186.5dp"
         android:layout_marginLeft="@dimen/dimen_13"
         android:layout_marginRight="@dimen/dimen_13"
+        android:paddingLeft="@dimen/dimen_13"
+        android:paddingRight="@dimen/dimen_13"
         android:background="@color/white"
         android:orientation="vertical">
 
@@ -37,7 +39,7 @@
                 android:singleLine="true"
                 android:text="123544444"
                 android:textColor="#4AA1FE"
-                android:textSize="@dimen/textsize_21" />
+                android:textSize="@dimen/textsize_20" />
 
             <TextView
                 android:id="@+id/tv_ygd_status"
@@ -45,10 +47,7 @@
                 android:layout_height="@dimen/dimen_22"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
-                android:background="@drawable/textview_border_red"
                 android:gravity="center"
-                android:text="待处理"
-                android:textColor="@color/color_ff506c"
                 android:textSize="@dimen/textsize_16"/>
         </RelativeLayout>
 
@@ -66,7 +65,9 @@
                 android:layout_toRightOf="@+id/tv_xiangqing"
                 android:maxLines="2"
                 android:ellipsize="end"
-                android:textSize="@dimen/textsize_18" />
+                android:paddingTop="@dimen/dimen_10"
+                android:lineSpacingExtra="@dimen/textsize_11"
+                android:textSize="@dimen/textsize_17" />
 
 
         <RelativeLayout

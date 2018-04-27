@@ -6,18 +6,21 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="186.5dp"
         android:layout_marginLeft="@dimen/dimen_13"
         android:layout_marginRight="@dimen/dimen_13"
+        android:paddingLeft="@dimen/dimen_13"
+        android:paddingRight="@dimen/dimen_13"
+        android:background="@color/white"
         android:orientation="vertical">
 
         <RelativeLayout
             android:id="@+id/re_ygd"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/dimen_40"
+            android:layout_height="@dimen/dimen_54"
             android:orientation="horizontal">
 
-            <TextView
+            <!--<TextView
                 android:id="@+id/tv_piaohao"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -25,17 +28,18 @@
                 android:text="票号："
                 android:textColor="@color/color_4d4d4d"
                 android:textSize="@dimen/textsize_18" />
+                android:layout_toRightOf="@id/tv_piaohao"
+                -->
 
             <TextView
                 android:id="@+id/tv_execution_fragment_bh"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:layout_toRightOf="@id/tv_piaohao"
                 android:singleLine="true"
                 android:text="123544444"
-                android:textColor="@color/color_4d4d4d"
-                android:textSize="@dimen/textsize_18" />
+                android:textColor="#4AA1FE"
+                android:textSize="@dimen/textsize_20" />
 
             <TextView
                 android:id="@+id/iv_ygd_status"
@@ -43,10 +47,7 @@
                 android:layout_height="@dimen/dimen_22"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
-                android:background="@drawable/textview_border_orange"
                 android:gravity="center"
-                android:text="执行中"
-                android:textColor="@color/color_e59c47"
                 android:textSize="@dimen/textsize_16"/>
         </RelativeLayout>
 
@@ -59,27 +60,30 @@
         <TextView
             android:id="@+id/tv_execution_fragment_cznr"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dimen_10"
+            android:layout_height="82dp"
             android:text="220kv普九策划i手法哦i好地方"
+            android:layout_toRightOf="@+id/tv_xiangqing"
             android:maxLines="2"
             android:ellipsize="end"
-            android:textColor="@color/color_595959"
+            android:paddingTop="@dimen/dimen_10"
+            android:lineSpacingExtra="@dimen/textsize_11"
             android:textSize="@dimen/textsize_17" />
+
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/dimen_50"
             android:layout_marginBottom="@dimen/dimen_13"
-            android:layout_marginTop="@dimen/dimen_13">
+            android:background="#fafafa">
 
             <TextView
                 android:id="@+id/tv_caozuoren"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="制票部门:"
-                android:textColor="@color/color_7a7a7a"
-                android:textSize="@dimen/textsize_15" />
+                android:text="操作人:"
+                android:textColor="@color/color_999999"
+                android:layout_centerVertical="true"
+                android:textSize="@dimen/textsize_17" />
 
             <TextView
                 android:id="@+id/tv_execution_fragment_czr"
@@ -87,8 +91,18 @@
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@id/tv_caozuoren"
                 android:text="张耀文"
-                android:textColor="@color/color_7a7a7a"
-                android:textSize="@dimen/textsize_15" />
+                android:layout_centerVertical="true"
+                android:textColor="@color/color_999999"
+                android:textSize="@dimen/textsize_17" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="申报时间:"
+                android:textColor="@color/color_999999"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/tv_execution_fragment_time"
+                android:textSize="@dimen/textsize_17" />
 
             <TextView
                 android:id="@+id/tv_execution_fragment_time"
@@ -96,8 +110,10 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:text="2016/11/04 09:49"
-                android:textColor="@color/color_7a7a7a"
-                android:textSize="@dimen/textsize_15" />
+                android:layout_centerVertical="true"
+                android:textColor="@color/color_999999"
+                android:textSize="@dimen/textsize_17" />
         </RelativeLayout>
     </LinearLayout>
+
 </LinearLayout>

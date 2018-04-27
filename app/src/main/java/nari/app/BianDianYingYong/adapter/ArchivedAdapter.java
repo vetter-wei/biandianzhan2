@@ -1,6 +1,10 @@
 package nari.app.BianDianYingYong.adapter;
 
 import android.content.Context;
+import android.graphics.Color;
+import android.text.SpannableString;
+import android.text.Spanned;
+import android.text.style.ForegroundColorSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -72,8 +76,12 @@ public class ArchivedAdapter extends BaseAdapter {
 //        }else if ("51".equals(status)) { //   已归档
 //
 //        }
+        SpannableString span = new SpannableString("详情："+ticketList.get(position).getCZRW());
+        span.setSpan(new ForegroundColorSpan(mContext.getResources().getColor(R.color.color_999999)), 0, 3, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        span.setSpan(new ForegroundColorSpan(mContext.getResources().getColor(R.color.font_66)), 3, span.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+
         holder.tv_archived_fragment_bh.setText(ticketList.get(position).getPH());
-        holder.tv_archived_fragment_cznr.setText(ticketList.get(position).getCZRW());
+        holder.tv_archived_fragment_cznr.setText(span);
         holder.tv_archived_fragment_czr.setText(ticketList.get(position).getZPBMMC());
         String time = ticketList.get(position).getZPSJ();
         if (time.length() >= 18) {
