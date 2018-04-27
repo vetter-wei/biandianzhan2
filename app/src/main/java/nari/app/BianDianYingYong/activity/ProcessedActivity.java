@@ -243,8 +243,11 @@ public class ProcessedActivity extends BaseActivity implements View.OnClickListe
             Log.e("lala", "checktickactivity   data======" + data);
             String i = jsonString(data);
             resultBean = ResultBean.fromJson(i, CheckTicketActivityBean.class);
+            //// TODO: 2018-04-27
+            if(resultBean == null)return;
+            //// TODO: 2018-04-27
             checkBean = resultBean.getRecords().get(0);
-            //// TODO: 2018-04-27  
+
             setData(checkBean);
         }
     }
@@ -338,16 +341,16 @@ public class ProcessedActivity extends BaseActivity implements View.OnClickListe
         String cb_right = recordsBean.getJXRYCZ();   //   检修人员操作
         if ("".equals(cb_left.trim())) {
             if ("".equals(cb_center.trim())) {
-                tv_pro_jianxiu.setTextColor(0xff29cccc);
+                tv_pro_jianxiu.setTextColor(getResources().getColor(R.color.colorPrimary));
                 image_pro_jianxiu.setImageResource(R.mipmap.pro_checked);
                 tv_pro_jhr.setText(recordsBean.getJHRMC());
             } else {
-                tv_pro_danren.setTextColor(0xff29cccc);
+                tv_pro_danren.setTextColor(getResources().getColor(R.color.colorPrimary));
                 image_pro_danren.setImageResource(R.mipmap.pro_checked);
                 tv_pro_jhr.setText("(空)");
             }
         } else {
-            tv_pro_jianhu.setTextColor(0xff29cccc);
+            tv_pro_jianhu.setTextColor(getResources().getColor(R.color.colorPrimary));
             image_pro_jianhu.setImageResource(R.mipmap.pro_checked);
             tv_pro_jhr.setText(recordsBean.getJHRMC());
         }

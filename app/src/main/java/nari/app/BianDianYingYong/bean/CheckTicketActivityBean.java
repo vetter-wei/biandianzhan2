@@ -9,7 +9,44 @@ import net.tsz.afinal.annotation.sqlite.Table;
  */
 @Table(name = "proActCache2")
 public class CheckTicketActivityBean {
+    //// TODO: 2018-04-27
     @Id
+    private String OBJ_ID = "OBJ_ID";
+    private String DYCS = "DYCS";
+    private String DYSJ = "DYSJ";
+    private String DYRYID = "DYRYID";
+    private String DYRYMC ="DYRYMC";
+    private String ZPBMMC = "ZPBMMC";
+    private String ZPBMID = "ZPBMID";
+    private String GZDDMC = "GZDDMC";
+    private String GZDDMS = "GZDDMS";
+    private String PH = "PH";
+    private String FLSJ = "FLSJ";
+    private String SLSJ = "SLSJ";
+    private String DLBH = "DLBH";
+    private String YJWB = "YJWB";
+    private String FLRMC = "FLRMC";
+    private String FLRID = "FLRID";
+    private String SLRMC = "SLRMC";
+    private String SLRID = "SLRID";
+    private String CZKGSJ = "CZKGSJ";
+    private String CZJSSJ ="CZJSSJ";
+    private String CZRW = "CZRW";
+    private String BZ = "BZ";
+    private String CZRID = "CZRID";
+    private String CZRMC = "CZRMC";
+    private String JHRID = "JHRID";
+    private String JHRMC = "JHRMC";
+    private String ZBFZRID = "ZBFZRID";
+    private String ZBFZRMC = "ZBFZRMC";
+    private String SSDSMC ="SSDSMC";
+    private String SSDSID = "SSDSID";
+    private String CZBZ = "CZBZ";
+    private String JHXCZ = "JHXCZ";
+    private String DRCZ = "DRCZ";
+    private String JXRYCZ = "JXRYCZ";
+    private String HWB = "HWB";
+    /*@Id
     private String OBJ_ID;
     private String DYCS;
     private String DYSJ;
@@ -44,7 +81,7 @@ public class CheckTicketActivityBean {
     private String JHXCZ;
     private String DRCZ;
     private String JXRYCZ;
-    private String HWB;
+    private String HWB;*/
 
     public String getOBJ_ID() {
         return OBJ_ID;
