@@ -254,7 +254,7 @@ public class ExecutionActivity extends BaseActivity implements View.OnClickListe
                 }
                 break;
             case R.id.ll_exe_jianhu:
-                tv_exe_jianhu.setTextColor(0xff29cccc);
+                tv_exe_jianhu.setTextColor(getResources().getColor(R.color.colorPrimary));
                 iv_exe_jianhu.setImageResource(R.mipmap.pro_checked);
                 tv_exe_danren.setTextColor(0xff4d4d4d);
                 iv_exe_danren.setImageResource(R.mipmap.pro_unchecked);
@@ -270,7 +270,7 @@ public class ExecutionActivity extends BaseActivity implements View.OnClickListe
             case R.id.ll_exe_danren:
                 tv_exe_jianhu.setTextColor(0xff4d4d4d);
                 iv_exe_jianhu.setImageResource(R.mipmap.pro_unchecked);
-                tv_exe_danren.setTextColor(0xff29cccc);
+                tv_exe_danren.setTextColor(getResources().getColor(R.color.colorPrimary));
                 iv_exe_danren.setImageResource(R.mipmap.pro_checked);
                 tv_exe_jianxiu.setTextColor(0xff4d4d4d);
                 iv_exe_jianxiu.setImageResource(R.mipmap.pro_unchecked);
@@ -286,7 +286,7 @@ public class ExecutionActivity extends BaseActivity implements View.OnClickListe
                 iv_exe_jianhu.setImageResource(R.mipmap.pro_unchecked);
                 tv_exe_danren.setTextColor(0xff4d4d4d);
                 iv_exe_danren.setImageResource(R.mipmap.pro_unchecked);
-                tv_exe_jianxiu.setTextColor(0xff29cccc);
+                tv_exe_jianxiu.setTextColor(getResources().getColor(R.color.colorPrimary));
                 iv_exe_jianxiu.setImageResource(R.mipmap.pro_checked);
                 jianxiu = true;
                 jianhu = false;
@@ -683,7 +683,7 @@ public class ExecutionActivity extends BaseActivity implements View.OnClickListe
 //            String cb_right = recordsBean.getJXRYCZ();   //   检修人员操作
         if ("".equals(cb_left.trim())) { // 监护状态下进行的操作
             if ("".equals(cb_center.trim())) {
-                tv_exe_jianxiu.setTextColor(0xff29cccc);
+                tv_exe_jianxiu.setTextColor(getResources().getColor(R.color.colorPrimary));
                 iv_exe_jianxiu.setImageResource(R.mipmap.pro_checked);
                 jianxiu = true;
                 danren = false;
@@ -691,7 +691,7 @@ public class ExecutionActivity extends BaseActivity implements View.OnClickListe
                 mTv_exe_jhr.setText(recordsBean.getJHRMC());
                 rl_exe_jhr.setClickable(true);
             } else {
-                tv_exe_danren.setTextColor(0xff29cccc);
+                tv_exe_danren.setTextColor(getResources().getColor(R.color.colorPrimary));
                 iv_exe_danren.setImageResource(R.mipmap.pro_checked);
                 danren = true;
                 jianxiu = false;
@@ -700,7 +700,7 @@ public class ExecutionActivity extends BaseActivity implements View.OnClickListe
                 rl_exe_jhr.setClickable(false);
             }
         } else {
-            tv_exe_jianhu.setTextColor(0xff29cccc);
+            tv_exe_jianhu.setTextColor(getResources().getColor(R.color.colorPrimary));
             iv_exe_jianhu.setImageResource(R.mipmap.pro_checked);
             jianhu = true;
             danren = false;
