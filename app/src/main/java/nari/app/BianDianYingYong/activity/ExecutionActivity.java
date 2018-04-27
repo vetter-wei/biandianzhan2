@@ -33,6 +33,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 import nari.app.BianDianYingYong.R;
 import nari.app.BianDianYingYong.adapter.ExecutionActivityAdapter;
@@ -44,8 +45,10 @@ import nari.app.BianDianYingYong.bean.ExecutionTicketActivityBean;
 import nari.app.BianDianYingYong.bean.ResultBean;
 import nari.app.BianDianYingYong.customview.BaseButtonDialog;
 import nari.app.BianDianYingYong.customview.CusDialogET;
+import nari.app.BianDianYingYong.customview.CustomDatePicker;
 import nari.app.BianDianYingYong.customview.CustomListView;
 import nari.app.BianDianYingYong.customview.CustomSignatureDialog;
+import nari.app.BianDianYingYong.jinyi.activity_jinyi.MainActivity_jinyi;
 import nari.app.BianDianYingYong.utils.DataReadUtil;
 import nari.app.BianDianYingYong.utils.SharedPreferencesHelper;
 import nari.app.BianDianYingYong.utils.StringUtil;
@@ -176,7 +179,63 @@ public class ExecutionActivity extends BaseActivity implements View.OnClickListe
         status = sharedPreferencesHelper.getStringValue("status");
         initListener();
     }
+    CustomDatePicker customDatePicker1;
+    private void initCustomTimePicker() {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm", Locale.CHINA);
+        String now = sdf.format(new Date());
+        customDatePicker1 = new CustomDatePicker(this, new CustomDatePicker.ResultHandler() {
+            @Override
+            public void handle(Calendar time) { // 回调接口，获得选中的时间
+                SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm", Locale.CHINA);
+                String s = sdf.format(time.getTime());
+                Date date = time.getTime();
+                if (mTimeStyle == 1) { //   2：操作开始时间 ；
+                    String czjsTime = mTv_exe_finsh_time.getText().toString().trim();
+                    if (czjsTime.equals("") || czjsTime == null) {
+                        mTv_exe_start_time.setText(getTime(date));
+                    } else {
+                        DateFormat fmt = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+                        Date d = null;
+                        try {
+                            d = fmt.parse(czjsTime);
+                        } catch (ParseException e) {
+                            e.printStackTrace();
+                        }
+                        if (date.before(d)) {
+                            mTv_exe_start_time.setText(getTime(date));
+                        } else {
+                            Toast.makeText(ExecutionActivity.this, "操作开始时间必须早于操作结束时间！", Toast.LENGTH_SHORT).show();
+                        }
+                    }
 
+                } else if (mTimeStyle == 2) {   // 3： 操作结束时间；
+                    String czksT = mTv_exe_start_time.getText().toString().trim();
+                    //把string转化为date
+                    DateFormat fmt = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+                    Date d = null;
+                    try {
+                        d = fmt.parse(czksT);
+                    } catch (ParseException e) {
+                        e.printStackTrace();
+                    }
+                    if (czksT == null || "".equals(czksT)) {
+                        Toast.makeText(ExecutionActivity.this, "请先选择操作开始时间！", Toast.LENGTH_LONG).show();
+                    } else {
+                        if (date.after(d)) {
+                            mTv_exe_finsh_time.setText(getTime(date));
+                        } else {
+                            Toast.makeText(ExecutionActivity.this, "操作结束时间必须晚于操作开始时间！", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                }
+            }
+        }, "2010-01-01 00:00", "2025-01-01 00:00");
+        customDatePicker1.showSpecificTime(false);
+        customDatePicker1.setIsLoop(true);
+
+
+
+    }
     private void initListener() {
         mTv_exe_look_all1.setOnClickListener(this);
         mIv_exe_back.setOnClickListener(this);
@@ -194,14 +253,16 @@ public class ExecutionActivity extends BaseActivity implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm", Locale.CHINA);
+        String now = sdf.format(new Date());
         switch (view.getId()) {
             case R.id.tv_exe_start_time:
                 mTimeStyle = 1;
-                pvCustomTime.show();
+                customDatePicker1.show(now);
                 break;
             case R.id.tv_exe_end_time:
                 mTimeStyle = 2;
-                pvCustomTime.show();
+                customDatePicker1.show(now);
                 break;
             case R.id.tv_exe_look_all:
                 if ("".equals(allCzbz)) {
@@ -834,119 +895,7 @@ public class ExecutionActivity extends BaseActivity implements View.OnClickListe
         Log.e("lala", "result=======" + result);
     }
 
-    private void initCustomTimePicker() {
 
-        /**
-         * @description
-         *
-         * 注意事项：
-         * 1.自定义布局中，id为 optionspicker 或者 timepicker 的布局以及其子控件必须要有，否则会报空指针.
-         * 具体可参考demo 里面的两个自定义layout布局。
-         * 2.因为系统Calendar的月份是从0-11的,所以如果是调用Calendar的set方法来设置时间,月份的范围也要是从0-11
-         * setRangDate方法控制起始终止时间(如果不设置范围，则使用默认时间1900-2100年，此段代码可注释)
-         */
-        Calendar selectedDate = Calendar.getInstance();//系统当前时间
-        Calendar startDate = Calendar.getInstance();
-        startDate.set(2014, 1, 23);
-        Calendar endDate = Calendar.getInstance();
-        endDate.set(2027, 2, 28);
-        //时间选择器 ，自定义布局
-        pvCustomTime = new TimePickerView.Builder(ExecutionActivity.this, new TimePickerView.OnTimeSelectListener() {
-            @Override
-            public void onTimeSelect(Date date, View v) {//选中事件回调
-
-                if (mTimeStyle == 1) { //   2：操作开始时间 ；
-                    String czjsTime = mTv_exe_finsh_time.getText().toString().trim();
-                    if (czjsTime.equals("") || czjsTime == null) {
-                        mTv_exe_start_time.setText(getTime(date));
-                    } else {
-                        DateFormat fmt = new SimpleDateFormat("yyyy-MM-dd HH:mm");
-                        Date d = null;
-                        try {
-                            d = fmt.parse(czjsTime);
-                        } catch (ParseException e) {
-                            e.printStackTrace();
-                        }
-                        if (date.before(d)) {
-                            mTv_exe_start_time.setText(getTime(date));
-                        } else {
-                            Toast.makeText(ExecutionActivity.this, "操作开始时间必须早于操作结束时间！", Toast.LENGTH_SHORT).show();
-                        }
-                    }
-
-                } else if (mTimeStyle == 2) {   // 3： 操作结束时间；
-                    String czksT = mTv_exe_start_time.getText().toString().trim();
-                    //把string转化为date
-                    DateFormat fmt = new SimpleDateFormat("yyyy-MM-dd HH:mm");
-                    Date d = null;
-                    try {
-                        d = fmt.parse(czksT);
-                    } catch (ParseException e) {
-                        e.printStackTrace();
-                    }
-                    if (czksT == null || "".equals(czksT)) {
-                        Toast.makeText(ExecutionActivity.this, "请先选择操作开始时间！", Toast.LENGTH_LONG).show();
-                    } else {
-                        if (date.after(d)) {
-                            mTv_exe_finsh_time.setText(getTime(date));
-                        } else {
-                            Toast.makeText(ExecutionActivity.this, "操作结束时间必须晚于操作开始时间！", Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                }
-
-            }
-        })
-                /*.setType(TimePickerView.Type.ALL)//default is all
-                .setCancelText("Cancel")
-                .setSubmitText("Sure")
-                .setContentSize(18)
-                .setTitleSize(20)
-                .setTitleText("Title")
-                .setTitleColor(Color.BLACK)
-               /*.setDividerColor(Color.WHITE)//设置分割线的颜色
-                .setTextColorCenter(Color.LTGRAY)//设置选中项的颜色
-                .setLineSpacingMultiplier(1.6f)//设置两横线之间的间隔倍数
-                .setTitleBgColor(Color.DKGRAY)//标题背景颜色 Night mode
-                .setBgColor(Color.BLACK)//滚轮背景颜色 Night mode
-                .setSubmitColor(Color.WHITE)
-                .setCancelColor(Color.WHITE)*/
-               /*.gravity(Gravity.RIGHT)// default is center*/
-                .setDate(selectedDate)
-                .setRangDate(startDate, endDate)
-                .setLayoutRes(R.layout.pickerview_custom_time, new CustomListener() {
-
-                    @Override
-                    public void customLayout(View v) {
-                        final TextView tvSubmit = (TextView) v.findViewById(R.id.tv_finish);
-                        View ivCancel = (View) v.findViewById(R.id.iv_cancel);
-                        tvSubmit.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View v) {
-                                pvCustomTime.returnData();
-                                pvCustomTime.dismiss();
-                            }
-                        });
-                        ivCancel.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View v) {
-                                pvCustomTime.dismiss();
-                            }
-                        });
-                    }
-                })
-                .setContentSize(18)
-                .setType(new boolean[]{true, true, true, true, true, true})
-                // .setType(new boolean[]{false, false, false, true, true, true})
-                .setLabel("年", "月", "日", "时", "分", "秒")
-                .setLineSpacingMultiplier(1.2f)
-                .setTextXOffset(0, 0, 0, 0, 0, 0) // (0, 0, 0, 40, 0, -40)  设置滚轮样式
-                .isCenterLabel(false) //是否只显示中间选中项的label文字，false则每项item全部都带有label。
-                .setDividerColor(0xFF24AD9D)
-                .setBackgroundId(R.color.btming)
-                .build();
-
-    }
 
     private String getTime(Date date) {//可根据需要自行截取数据显示
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss"); ///    "yyyy-MM-dd HH:mm:ss");

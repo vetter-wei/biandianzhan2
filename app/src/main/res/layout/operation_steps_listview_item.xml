@@ -1,20 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
+                android:background="#f2f2f2"
               android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="@dimen/dimen_7"
-        android:background="@drawable/item_border_"
+        android:layout_marginBottom="@dimen/dimen_5"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/cornor_btn"
         android:orientation="vertical">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/dimen_33"
+            android:layout_height="50dp"
             android:orientation="horizontal">
 
             <TextView
@@ -25,7 +27,7 @@
                 android:layout_marginLeft="10dp"
                 android:text="序号 : "
                 android:textColor="@color/line_fc"
-                android:textSize="@dimen/textsize_15" />
+                android:textSize="@dimen/textsize_17" />
 
             <TextView
                 android:id="@+id/tv_czxm_listview_number"
@@ -35,22 +37,22 @@
                 android:layout_toRightOf="@id/tv_1"
                 android:text="11"
                 android:textColor="@color/line_fc"
-                android:textSize="@dimen/textsize_15" />
+                android:textSize="@dimen/textsize_17" />
 
             <ImageView
                 android:id="@+id/image_czxm_take_photo"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="20dp"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="@dimen/dimen_10"
-                android:src="@mipmap/can_photo"/>
+                android:src="@mipmap/can_photo" />
         </RelativeLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="2dp"
-            android:background="@drawable/dash_line"
+            android:background="#f2f2f2"
             android:layerType="software"
             android:orientation="horizontal" />
 
@@ -62,8 +64,8 @@
             android:ellipsize="end"
             android:maxLines="3"
             android:text="这里是操作步骤的详细内容这这里是操作步骤的详细内容这里是操作步骤的详细内容"
-            android:textColor="@color/color_4d4d4d"
-            android:textSize="@dimen/textsize_14" />
+            android:textColor="#666666"
+            android:textSize="@dimen/textsize_17" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -74,17 +76,17 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/dimen_37"
+            android:layout_height="50dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:focusable="false">
 
             <LinearLayout
                 android:id="@+id/ll_czxm_xuanze"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
+                android:layout_width="120dp"
+                android:layout_height="30dp"
                 android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
                 android:background="@mipmap/czbz_moren"
                 android:focusable="false"
                 android:orientation="horizontal"
@@ -111,7 +113,7 @@
                 android:layout_centerVertical="true"
                 android:text=""
                 android:textColor="@color/color_4d4d4d"
-                android:textSize="@dimen/textsize_14" />
+                android:textSize="@dimen/textsize_17" />
         </RelativeLayout>
     </LinearLayout>
 </LinearLayout>

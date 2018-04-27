@@ -184,16 +184,16 @@ public class ArchivedActivity extends BaseActivity implements View.OnClickListen
             String cb_right = recordsBean.getJXRYCZ();   //   检修人员操作
             if ("".equals(cb_left.trim())) {
                 if ("".equals(cb_center.trim())) {
-                    mTv_arc_jianxiu.setTextColor(0xff29cccc);
+                    mTv_arc_jianxiu.setTextColor(getResources().getColor(R.color.colorPrimary));
                     mIv_arc_jianxiu.setImageResource(R.mipmap.pro_checked);
                     mTv_arc_jhr.setText(recordsBean.getJHRMC());
                 } else {
-                    mTv_arc_danren.setTextColor(0xff29cccc);
+                    mTv_arc_danren.setTextColor(getResources().getColor(R.color.colorPrimary));
                     mIv_arc_danren.setImageResource(R.mipmap.pro_checked);
                     mTv_arc_jhr.setText("(空)");
                 }
             } else {
-                mTv_arc_jianhu.setTextColor(0xff29cccc);
+                mTv_arc_jianhu.setTextColor(getResources().getColor(R.color.colorPrimary));
                 mIv_arc_jianhu.setImageResource(R.mipmap.pro_checked);
                 mTv_arc_jhr.setText(recordsBean.getJHRMC());
             }
