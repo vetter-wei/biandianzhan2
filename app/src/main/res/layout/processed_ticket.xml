@@ -9,7 +9,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:descendantFocusability="afterDescendants"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
 
         <View
             android:id="@+id/view_title"
@@ -364,7 +366,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="@dimen/dimen_1"
-                                android:background="@drawable/dash_line"
+                                android:background="#f2f2f2"
                                 android:layerType="software" />
 
                             <RelativeLayout
@@ -511,7 +513,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/dimen_1"
-                            android:background="@drawable/dash_line_dark"
+                            android:background="#f2f2f2"
                             android:layerType="software" />
 
                         <LinearLayout
@@ -558,7 +560,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="@dimen/dimen_1"
-                                android:background="@drawable/dash_line"
+                                android:background="#f2f2f2"
                                 android:layerType="software" />
 
                             <nari.app.BianDianYingYong.customview.CustomListView

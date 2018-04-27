@@ -63,7 +63,7 @@
             android:maxLines="3"
             android:text="这里是操作步骤的详细内容这这里是操作步骤的详细内容这里是操作步骤的详细内容"
             android:textColor="@color/color_4d4d4d"
-            android:textSize="@dimen/textsize_14" />
+            android:textSize="@dimen/textsize_17" />
 
         <LinearLayout
             android:layout_width="match_parent"
