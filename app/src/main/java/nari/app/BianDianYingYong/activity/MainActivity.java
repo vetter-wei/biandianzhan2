@@ -142,6 +142,23 @@ public class MainActivity extends FragmentActivity {
 
                     }
                 });
+                rg_change.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                    @Override
+                    public void onCheckedChanged(RadioGroup group, @IdRes int checkedId) {
+                        switch (checkedId){
+                            case R.id.rb_top1:
+                                vp_main_activity.setCurrentItem(0);
+                                break;
+
+                            case R.id.rb_top2:
+                                vp_main_activity.setCurrentItem(1);
+                                break;
+                            case R.id.rb_top3:
+                                vp_main_activity.setCurrentItem(2);
+                                break;
+                        }
+                    }
+                });
                 break;
             default:
                 rb_top2.setVisibility(View.GONE);
