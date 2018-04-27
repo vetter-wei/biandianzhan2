@@ -103,59 +103,90 @@ public class MainActivity extends FragmentActivity {
     }
 
     private void initListener() {
-        vp_main_activity.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-            @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
 
-            }
-
-            @Override
-            public void onPageSelected(int position) {
-                if (position == 0) {
-
-                    rb_top1.setChecked(true);
-                    rb_top2.setChecked(false);
-                    rb_top3.setChecked(false);
-                } else if (position == 1) {
-                    rb_top1.setChecked(false);
-                    rb_top2.setChecked(true);
-                    rb_top3.setChecked(false);
-                }else if(position == 2){
-                    rb_top1.setChecked(false);
-                    rb_top2.setChecked(false);
-                    rb_top3.setChecked(true);
-                }
-            }
-
-            @Override
-            public void onPageScrollStateChanged(int state) {
-
-            }
-        });
         cache.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 DownloadPopupWindow download = new DownloadPopupWindow(MainActivity.this, cache, adapter.getProFragment(),adapter.getExeFragment());
             }
         });
-        rg_change.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, @IdRes int checkedId) {
-                switch (checkedId){
-                    case R.id.rb_top1:
-                        vp_main_activity.setCurrentItem(0);
-                        break;
-                    case R.id.rb_top2:
-                        vp_main_activity.setCurrentItem(1);
-                        break;
-                    case R.id.rb_top3:
-                        vp_main_activity.setCurrentItem(2);
-                        break;
+        String status = adapter.getStatus();
+        switch (status){
+            case "1":
+                vp_main_activity.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+                    @Override
+                    public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
 
+                    }
 
-                }
-            }
-        });
+                    @Override
+                    public void onPageSelected(int position) {
+                        if (position == 0) {
+
+                            rb_top1.setChecked(true);
+                            rb_top2.setChecked(false);
+                            rb_top3.setChecked(false);
+                        } else if (position == 1) {
+                            rb_top1.setChecked(false);
+                            rb_top2.setChecked(true);
+                            rb_top3.setChecked(false);
+                        }else if(position == 2){
+                            rb_top1.setChecked(false);
+                            rb_top2.setChecked(false);
+                            rb_top3.setChecked(true);
+                        }
+                    }
+
+                    @Override
+                    public void onPageScrollStateChanged(int state) {
+
+                    }
+                });
+                break;
+            default:
+                rb_top2.setVisibility(View.GONE);
+                rb_top3.setText("执行中");
+                rg_change.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                    @Override
+                    public void onCheckedChanged(RadioGroup group, @IdRes int checkedId) {
+                        switch (checkedId){
+                            case R.id.rb_top1:
+                                vp_main_activity.setCurrentItem(0);
+                                break;
+
+                            case R.id.rb_top3:
+                                vp_main_activity.setCurrentItem(1);
+                                break;
+                        }
+                    }
+                });
+                vp_main_activity.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+                    @Override
+                    public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+                    }
+
+                    @Override
+                    public void onPageSelected(int position) {
+                        if (position == 0) {
+
+                            rb_top1.setChecked(true);
+                            rb_top3.setChecked(false);
+                        }else if(position == 1){
+                            rb_top1.setChecked(false);
+                            rb_top3.setChecked(true);
+                        }
+                    }
+
+                    @Override
+                    public void onPageScrollStateChanged(int state) {
+
+                    }
+                });
+
+                break;
+        }
+
     }
 
     /**

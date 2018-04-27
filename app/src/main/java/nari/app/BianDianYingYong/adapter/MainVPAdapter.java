@@ -24,6 +24,10 @@ public class MainVPAdapter extends FragmentPagerAdapter {
     private HashMap<Integer, Fragment> hashMap = new HashMap<>();
     private String status;
 
+    public String getStatus() {
+        return status;
+    }
+
     public MainVPAdapter(FragmentManager fm, Context context, String status) {
         super(fm);
         this.status = status;
