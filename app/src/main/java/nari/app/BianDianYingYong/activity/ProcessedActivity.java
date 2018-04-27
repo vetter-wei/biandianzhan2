@@ -243,8 +243,11 @@ public class ProcessedActivity extends BaseActivity implements View.OnClickListe
             Log.e("lala", "checktickactivity   data======" + data);
             String i = jsonString(data);
             resultBean = ResultBean.fromJson(i, CheckTicketActivityBean.class);
+            //// TODO: 2018-04-27
+            if(resultBean == null)return;
+            //// TODO: 2018-04-27
             checkBean = resultBean.getRecords().get(0);
-            //// TODO: 2018-04-27  
+
             setData(checkBean);
         }
     }
