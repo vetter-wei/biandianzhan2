@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -20,10 +21,10 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="17dp"
             android:padding="8dp"
+            android:src="@mipmap/to_down"
             android:text="取消"
-            android:textSize="18sp"
             android:textColor="@color/colorPrimary"
-            android:src="@mipmap/to_down" />
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/tv_finish"

@@ -352,7 +352,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_alignParentRight="true"
                                     android:layout_centerVertical="true"
-                                    android:text="2017 09 26 14:24"
+                                    android:text="2017-09-26 14:24"
                                     android:textColor="@color/color_7b7b7b"
                                     android:textSize="@dimen/textsize_17" />
                             </RelativeLayout>
@@ -381,7 +381,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_alignParentRight="true"
                                     android:layout_centerVertical="true"
-                                    android:text="2017 09 26 14:24"
+                                    android:text="2017-09-26 14:24"
                                     android:textColor="@color/color_7b7b7b"
                                     android:textSize="@dimen/textsize_17" />
                             </RelativeLayout>
@@ -433,7 +433,6 @@
                             android:layout_marginLeft="@dimen/dimen_13"
                             android:layout_marginRight="@dimen/dimen_13"
                             android:background="@drawable/shape_tv_caozuo_task"
-                            android:editable="false"
                             android:gravity="start"
                             android:hint="请输入操作内容"
                             android:textColor="@color/color_4c4c4c"
