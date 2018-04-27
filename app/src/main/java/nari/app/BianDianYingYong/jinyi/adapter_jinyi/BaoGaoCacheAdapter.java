@@ -99,24 +99,23 @@ public class BaoGaoCacheAdapter extends BaseAdapter {
         }
         if ("".equals(baoGaoList.get(i).getPJZ().trim())) {
             holder.pb_pjbg_jdt.setProgress(0);
-            holder.tv_pjbg_point.setText("未评价");
+            holder.tv_pjbg_point.setVisibility(View.GONE);
+            holder.tv_weipingjia.setVisibility(View.VISIBLE);
+            holder.tv_fen.setVisibility(View.GONE);
         } else {
-
-            holder.tv_pjbg_point.setText(baoGaoList.get(i).getPJZ() + "分");
+            holder.tv_fen.setVisibility(View.VISIBLE);
+            holder.tv_pjbg_point.setVisibility(View.VISIBLE);
+            holder.tv_weipingjia.setVisibility(View.GONE);
+            holder.tv_pjbg_point.setText(baoGaoList.get(i).getPJZ());
         }
         holder.lo_whole.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                switch (bean.getBGZT()) {
-                    case "01":
+
                         //progressDialog = new ProgressDialog();
                        // progressDialog.showProgressDialog(mContext, "加载中..", false);
                         PJBGCacheEditActivity.anctionStart((Activity) mContext, bean.getOBJ_ID(), bean.getPJSB_ID(), bean.getPJMB_ID(), bean.getZJRW_ID(), bean.getPJZ(), bean.getPJXZ_ID(), 2);
-                        break;
-                    case "02":
-                        PJBGXQActivity.anctionStart((Activity) mContext, bean.getOBJ_ID(), bean.getPJSB_ID(), bean.getPJMB_ID(), bean.getZJRW_ID(), bean.getPJZ(), bean.getPJXZ_ID(), 2);
-                        break;
-                }
+
             }
         });
         return view;
@@ -143,7 +142,10 @@ public class BaoGaoCacheAdapter extends BaseAdapter {
 
         @InjectView(R.id.tv_pjbg_dydj)
         TextView tv_pjbg_dydj;
-
+        @InjectView(R.id.tv_fen)
+        TextView tv_fen;
+        @InjectView(R.id.tv_weipingjia)
+        TextView tv_weipingjia;
 
         public ViewHolder(View view) {
             ButterKnife.inject(this, view);

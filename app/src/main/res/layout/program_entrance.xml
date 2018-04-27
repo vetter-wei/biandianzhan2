@@ -20,7 +20,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/dimen_43"
+            android:layout_height="@dimen/dimen_50"
             android:background="#43BDF8">
 
             <View
@@ -37,7 +37,7 @@
                 android:gravity="center"
                 android:text="变电五通应用"
                 android:textColor="@color/colorTitle"
-                android:textSize="20sp" />
+                android:textSize="22dp" />
 
             <ImageView
                 android:visibility="gone"
@@ -52,13 +52,11 @@
     </LinearLayout>
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="340dp">
+        android:layout_height="420dp">
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="280dp"
+            android:layout_height="370dp"
             android:background="@drawable/homepage_logo"
-
-
             android:orientation="horizontal">
 
 

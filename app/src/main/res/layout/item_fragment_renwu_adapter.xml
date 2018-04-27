@@ -17,7 +17,7 @@
         android:layout_height="match_parent">
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/dimen_40">
+            android:layout_height="@dimen/dimen_44">
 
             <TextView
                 android:id="@+id/tv_pjrw_content"
@@ -28,12 +28,12 @@
                 android:layout_marginLeft="@dimen/dimen_13"
                 android:text="断路器评价细则任务"
                 android:textColor="#666666"
-                android:textSize="@dimen/textsize_17" />
+                android:textSize="@dimen/textsize_20" />
 
             <ImageView
                 android:id="@+id/iv_renwu_fragment_row"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="@dimen/dimen_13"
@@ -51,7 +51,7 @@
         <RelativeLayout
 
             android:layout_width="match_parent"
-            android:layout_height="@dimen/dimen_40">
+            android:layout_height="@dimen/dimen_44">
 
             <TextView
                 android:id="@+id/tv_renwu_fragment_start"
@@ -62,7 +62,7 @@
                 android:layout_marginLeft="@dimen/dimen_13"
                 android:text="开始:"
                 android:textColor="@color/color_999999"
-                android:textSize="@dimen/textsize_14" />
+                android:textSize="@dimen/textsize_17" />
 
             <TextView
                 android:id="@+id/tv_pjrw_startTime"
@@ -71,9 +71,9 @@
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="@dimen/dimen_9"
                 android:layout_toRightOf="@+id/tv_renwu_fragment_start"
-                android:text="2016/11/09 19:54"
+                android:text="2016/11/09"
                 android:textColor="@color/color_999999"
-                android:textSize="@dimen/textsize_14" />
+                android:textSize="@dimen/textsize_17" />
 
             <TextView
                 android:id="@+id/tv_renwu_fragment_end"
@@ -84,7 +84,7 @@
                 android:layout_toLeftOf="@+id/tv_pjrw_endTime"
                 android:text="结束:"
                 android:textColor="@color/color_999999"
-                android:textSize="@dimen/textsize_14" />
+                android:textSize="@dimen/textsize_17" />
 
             <TextView
                 android:id="@+id/tv_pjrw_endTime"
@@ -93,9 +93,9 @@
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="@dimen/dimen_13"
-                android:text="2016/11/09 19:54"
+                android:text="2016/11/09"
                 android:textColor="@color/color_999999"
-                android:textSize="@dimen/textsize_14" />
+                android:textSize="@dimen/textsize_17" />
 
 
         </RelativeLayout>

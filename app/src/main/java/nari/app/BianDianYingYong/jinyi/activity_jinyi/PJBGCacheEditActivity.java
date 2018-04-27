@@ -12,6 +12,7 @@ import android.support.v4.content.ContextCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -107,10 +108,48 @@ public class PJBGCacheEditActivity extends BaseActivity implements View.OnClickL
         init();
         initListener();
         initData();
+        // TODO: 2018-04-26
+        initFakeData();
         //BaoGaoAdapter.progressDialog.cancelProgressDialog();
 
     }
+    // TODO: 2018-04-26 虚假数据
+    private void initFakeData() {
 
+
+        btxxList = new ArrayList<>();
+        BTSXBean btsxBean0 = new BTSXBean();
+        btsxBean0.setSXMC("变电站名称");
+        btsxBean0.setQZ("朝阳变电站");
+        BTSXBean btsxBean1 = new BTSXBean();
+        btsxBean1.setSXMC("设备型号");
+        btsxBean1.setQZ("朝阳变电站");
+        BTSXBean btsxBean2 = new BTSXBean();
+        btsxBean2.setSXMC("生产日期");
+        btsxBean2.setQZ("朝阳变电站");
+        BTSXBean btsxBean3 = new BTSXBean();
+        btsxBean3.setSXMC("运行编号");
+        btsxBean3.setQZ("朝阳变电站");
+        BTSXBean btsxBean4 = new BTSXBean();
+        btsxBean4.setSXMC("投运日期");
+        btsxBean4.setQZ("朝阳变电站");
+//        btzhxxBean = result.getRecords().get(0);
+        btxxList.add(btsxBean0);
+        btxxList.add(btsxBean1);
+        btxxList.add(btsxBean2);
+        btxxList.add(btsxBean3);
+        btxxList.add(btsxBean4);
+        //reSetData();
+        pjxzBean = new PJXZBean();
+        pjdxBeanList = new ArrayList<>();
+        PJDXBean bean0 = new PJDXBean();
+        PJDXBean bean1 = new PJDXBean();
+        pjdxBeanList.add(bean0);
+        pjdxBeanList.add(bean1);
+        //reSetData();
+        freshUI();
+
+    }
     FinalDb db;
 
     private void init() {
@@ -185,12 +224,13 @@ public class PJBGCacheEditActivity extends BaseActivity implements View.OnClickL
 
             } else {
                 if ("变电站名称".equals(btsxBean.getSXMC())) {
-                    tv_ZFMC.setText(btsxBean.getSXMC() + ":" + btsxBean.getQZ());
+                    tv_ZFMC.setText(btsxBean.getQZ());
                 } else {
-                    TextView tv = new TextView(this);
-                    tv.setText(btsxBean.getSXMC() + ":" + btsxBean.getQZ());
-                    tv.setTextSize(16);
-                    ll_btxx.addView(tv);
+                    final LinearLayout view = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.cell_btxx,
+                            ll_btxx, false);
+                    ((TextView)view.findViewById(R.id.tv_name)).setText(btsxBean.getSXMC());
+                    ((TextView)view.findViewById(R.id.tv_value)).setText(btsxBean.getQZ());
+                    ll_btxx.addView(view);
                 }
             }
         }
@@ -237,7 +277,7 @@ public class PJBGCacheEditActivity extends BaseActivity implements View.OnClickL
         }
 
         BigDecimal scoreB = new BigDecimal(score);
-        tv_FZ.setText(scoreB.add(new BigDecimal(fz)).setScale(2, BigDecimal.ROUND_HALF_UP).doubleValue() + "分");
+        tv_FZ.setText(scoreB.add(new BigDecimal(fz)).setScale(2, BigDecimal.ROUND_HALF_UP).doubleValue() + "");
         score = scoreB.add(new BigDecimal(fz)).setScale(2, BigDecimal.ROUND_HALF_UP).doubleValue();
         int progress = (int) (((score + fz) / totalscore) * 100);
         pr_fz.setProgress(progress);

@@ -157,11 +157,17 @@ public class JinyihuaOffActivity extends BaseActivity {
         if(jyhCacheBeens == null || jyhCacheBeens.size() ==0){
             Toast.makeText(this,"无缓存数据",Toast.LENGTH_SHORT).show();
             //return;
+
         }
         baoGaoList.clear();
         for(JYHCacheBean jyhCacheBean :jyhCacheBeens){
             baoGaoList.add(new Gson().fromJson(jyhCacheBean.getListgson(),PingjiabaogaoBean.class));
         }
+        // TODO: 2018-04-27
+        baoGaoList.add(new PingjiabaogaoBean() );
+        baoGaoList.add(new PingjiabaogaoBean() );
+        baoGaoList.add(new PingjiabaogaoBean() );
+        // TODO: 2018-04-27
         freshData();
     }
 

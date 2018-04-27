@@ -33,7 +33,7 @@
                 android:singleLine="true"
                 android:text="1号主变"
                 android:textColor="#00a2ff"
-                android:textSize="@dimen/textsize_17" />
+                android:textSize="@dimen/textsize_20" />
             <TextView
                 android:id="@+id/tv_weipingjia"
                 android:layout_width="wrap_content"
@@ -45,24 +45,24 @@
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="13dp"
                 android:textColor="@color/colorPrimary"
-                android:textSize="@dimen/textsize_17" />
+                android:textSize="@dimen/textsize_20" />
             <TextView
                 android:id="@+id/tv_pjbg_point"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
 
-                android:layout_centerVertical="true"
-
 
                 android:text="80"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="23dp"
+                android:layout_marginRight="3dp"
                 android:textColor="@color/colorPrimary"
-                android:textSize="@dimen/textsize_18" />
+                android:textSize="@dimen/textsize_20"
+                android:layout_alignBaseline="@+id/tv_fen"
+                android:layout_alignBottom="@+id/tv_fen"
+                android:layout_toStartOf="@+id/tv_fen" />
             <TextView
                 android:id="@+id/tv_fen"
                 android:layout_alignParentRight="true"
-                android:translationY="3dp"
+
 
                 android:layout_marginRight="13dp"
                 android:layout_width="wrap_content"
@@ -71,7 +71,7 @@
 
                 android:text="分"
                 android:textColor="@color/colorPrimary"
-                android:textSize="@dimen/textsize_10" />
+                android:textSize="@dimen/textsize_12" />
         </RelativeLayout>
 
         <LinearLayout
@@ -96,7 +96,7 @@
                 android:layout_marginLeft="13dp"
                 android:text="评价任务"
                 android:textColor="@color/color_999999"
-                android:textSize="@dimen/textsize_15" />
+                android:textSize="@dimen/textsize_17" />
 
             <TextView
                 android:id="@+id/tv_pjbg_rwmc"
@@ -108,7 +108,7 @@
                 android:singleLine="true"
                 android:text="主变压器"
                 android:textColor="#666666"
-                android:textSize="@dimen/textsize_15" />
+                android:textSize="@dimen/textsize_17" />
 
         </RelativeLayout>
 
@@ -137,7 +137,7 @@
                         android:layout_marginLeft="13dp"
                         android:text="设备类型"
                         android:textColor="@color/color_999999"
-                        android:textSize="@dimen/textsize_15" />
+                        android:textSize="@dimen/textsize_17" />
 
                     <TextView
                         android:id="@+id/tv_pjbg_sblx"
@@ -149,7 +149,7 @@
                         android:singleLine="true"
                         android:text="主变压器"
                         android:textColor="#666666"
-                        android:textSize="@dimen/textsize_15" />
+                        android:textSize="@dimen/textsize_17" />
 
                 </RelativeLayout>
 
@@ -165,7 +165,7 @@
                         android:layout_marginLeft="13dp"
                         android:text="电站名称"
                         android:textColor="@color/color_999999"
-                        android:textSize="@dimen/textsize_15"
+                        android:textSize="17dp"
                         android:layout_alignParentTop="true"
                         android:layout_alignParentStart="true"
                         android:layout_marginStart="13dp" />
@@ -180,7 +180,7 @@
                         android:singleLine="true"
                         android:text="XXXKVXXX变电站"
                         android:textColor="#666666"
-                        android:textSize="@dimen/textsize_15" />
+                        android:textSize="17dp" />
 
                 </RelativeLayout>
 
@@ -197,7 +197,7 @@
                         android:layout_marginLeft="13dp"
                         android:text="电压等级"
                         android:textColor="@color/color_999999"
-                        android:textSize="@dimen/textsize_15" />
+                        android:textSize="17dp" />
 
                     <TextView
                         android:id="@+id/tv_pjbg_dydj"
@@ -209,7 +209,7 @@
                         android:singleLine="true"
                         android:text="交流110kV"
                         android:textColor="#666666"
-                        android:textSize="@dimen/textsize_15" />
+                        android:textSize="@dimen/textsize_17" />
 
                 </RelativeLayout>
 
@@ -226,7 +226,7 @@
                         android:layout_marginLeft="13dp"
                         android:text="运行编号"
                         android:textColor="@color/color_999999"
-                        android:textSize="@dimen/textsize_15"
+                        android:textSize="17dp"
                         android:layout_alignParentTop="true"
                         android:layout_alignParentStart="true"
                         android:layout_marginStart="13dp" />
@@ -241,7 +241,7 @@
                         android:singleLine="true"
                         android:text="123544444adz"
                         android:textColor="#666666"
-                        android:textSize="@dimen/textsize_15" />
+                        android:textSize="17dp" />
 
                 </RelativeLayout>
 
@@ -259,7 +259,7 @@
                         android:layout_marginLeft="13dp"
                         android:text="评价时间"
                         android:textColor="@color/color_999999"
-                        android:textSize="@dimen/textsize_15" />
+                        android:textSize="17dp" />
 
                     <TextView
                         android:id="@+id/tv_pjbg_pjsj"
@@ -270,7 +270,7 @@
 
                         android:text="2016/11/06 19:49"
                         android:textColor="#666666"
-                        android:textSize="@dimen/textsize_15"
+                        android:textSize="17dp"
                         android:layout_alignParentTop="true"
                         android:layout_toEndOf="@+id/tv_shijian"
                         android:layout_marginStart="10dp" />
