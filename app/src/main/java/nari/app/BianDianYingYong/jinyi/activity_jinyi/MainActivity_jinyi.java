@@ -67,7 +67,7 @@ public class MainActivity_jinyi extends BaseActivity implements View.OnClickList
     private ImageView search_menu;
     private TextView tv_pjrw_screen_kssj; // 开始时间
     private TextView tv_pjrw_screen_jssj; // 结束时间
-    private TimePickerView pvCustomTime; // 时间选择器
+
     private int mTimeStyle;
     private TextView tv_screen_reset; // 重置
     private TextView tv_screen_sure; // 确认

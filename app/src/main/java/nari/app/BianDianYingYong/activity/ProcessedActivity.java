@@ -244,6 +244,7 @@ public class ProcessedActivity extends BaseActivity implements View.OnClickListe
             String i = jsonString(data);
             resultBean = ResultBean.fromJson(i, CheckTicketActivityBean.class);
             checkBean = resultBean.getRecords().get(0);
+            //// TODO: 2018-04-27  
             setData(checkBean);
         }
     }

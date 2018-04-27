@@ -4,6 +4,7 @@ import android.content.pm.ActivityInfo;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.annotation.IdRes;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -13,6 +14,8 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import org.json.JSONArray;
@@ -26,6 +29,7 @@ import nari.app.BianDianYingYong.bean.BTZHXXBean;
 import nari.app.BianDianYingYong.bean.ResultBean;
 import nari.app.BianDianYingYong.customview.DownloadPopupWindow;
 import nari.app.BianDianYingYong.customview.LXHUTSDialog;
+import nari.app.BianDianYingYong.jinyi.customview_jinyi.MyRadioGroup;
 import nari.app.BianDianYingYong.utils.DataReadUtil;
 import nari.app.BianDianYingYong.utils.SharedPreferencesHelper;
 import nari.mip.core.Platform;
@@ -40,6 +44,10 @@ public class MainActivity extends FragmentActivity {
 
     private String userName;
     private ImageView cache;
+    private RadioButton rb_top1;
+    private RadioButton rb_top2;
+    private RadioButton rb_top3;
+    private MyRadioGroup rg_change;
     private String status;
     private SharedPreferencesHelper sharedPreferencesHelper;
     private MainVPAdapter adapter;
@@ -66,15 +74,19 @@ public class MainActivity extends FragmentActivity {
             getPersonalData();
         }
     }
-
+    ViewPager vp_main_activity;
 
     /**
      * 初始化页面控件
      */
     private void initView() {
         TabLayout tab_bar = (TabLayout) findViewById(R.id.tab_bar);
-        ViewPager vp_main_activity = (ViewPager) findViewById(R.id.vp_main_activity);
+        vp_main_activity = (ViewPager) findViewById(R.id.vp_main_activity);
         cache = findViewById(R.id.popupwindow_cache);
+        rb_top3 = findViewById(R.id.rb_top3);
+        rb_top2 = findViewById(R.id.rb_top2);
+        rb_top1 = findViewById(R.id.rb_top1);
+        rg_change = findViewById(R.id.rg_change);
         //  vp_main_activity.setOffscreenPageLimit(3);//设置预加载的fragment个数，防止调取动态数据时，listview会显示空白，原因：就是onCreateView每次都调用导致的，这样fragment每次都会设置新的view，而调试发现，之前的view并没有被回收……这就导致了，新的view覆盖了之前设置的view，
 //        navigationView = (NavigationView) findViewById(R.id.nav_view);
         adapter = new MainVPAdapter(getSupportFragmentManager(), getApplicationContext(), status);
@@ -91,10 +103,57 @@ public class MainActivity extends FragmentActivity {
     }
 
     private void initListener() {
+        vp_main_activity.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                if (position == 0) {
+
+                    rb_top1.setChecked(true);
+                    rb_top2.setChecked(false);
+                    rb_top3.setChecked(false);
+                } else if (position == 1) {
+                    rb_top1.setChecked(false);
+                    rb_top2.setChecked(true);
+                    rb_top3.setChecked(false);
+                }else if(position == 2){
+                    rb_top1.setChecked(false);
+                    rb_top2.setChecked(false);
+                    rb_top3.setChecked(true);
+                }
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
         cache.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 DownloadPopupWindow download = new DownloadPopupWindow(MainActivity.this, cache, adapter.getProFragment(),adapter.getExeFragment());
+            }
+        });
+        rg_change.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, @IdRes int checkedId) {
+                switch (checkedId){
+                    case R.id.rb_top1:
+                        vp_main_activity.setCurrentItem(0);
+                        break;
+                    case R.id.rb_top2:
+                        vp_main_activity.setCurrentItem(1);
+                        break;
+                    case R.id.rb_top3:
+                        vp_main_activity.setCurrentItem(2);
+                        break;
+
+
+                }
             }
         });
     }

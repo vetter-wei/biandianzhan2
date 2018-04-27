@@ -202,15 +202,12 @@ public class PJBGCacheEditActivity extends BaseActivity implements View.OnClickL
                 onBackPressed();
                 break;
             case R.id.ic_filter:
-                //onBackPressed();
-                //todo  筛选跳转弹窗逻辑
+
                 drawerLayout.openDrawer(GravityCompat.END);
 
                 break;
             case R.id.baidu_view:
-                //onBackPressed();
-                //todo  筛选跳转弹窗逻辑
-                //drawerLayout.openDrawer(GravityCompat.END);
+
                 save();
 
                 break;
